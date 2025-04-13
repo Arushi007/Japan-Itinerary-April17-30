@@ -21,18 +21,6 @@
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
     }
-    details {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    summary {
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
     ul {
       list-style: none;
       padding-left: 0;
@@ -47,14 +35,12 @@
       position: absolute;
       left: 0;
     }
-    .flight::before {
-      content: '✈️';
-    }
-    .hotel::before {
-      content: '🏨';
-    }
-    .transport::before {
-      content: '🚅';
+    .day {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
     }
     .button {
       display: inline-block;
@@ -65,100 +51,130 @@
       text-decoration: none;
       margin-top: 10px;
     }
-    img.map {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
   </style>
 </head>
 <body>
 
 <h1>Japan Travel Itinerary</h1>
 
-<details open>
-  <summary>April 18 - Tokyo Highlights</summary>
+<div class="day">
+  <h2>April 18 - Tokyo</h2>
   <ul>
-    <li>Arrival in Tokyo</li>
-    <li>🛫 Flight Arrival & Check-in</li>
-    <li>Imperial Palace, Meiji Shrine, Yoyogi Park</li>
-    <li>Evening at Ueno Park, Asakusa, Shibuya Crossing</li>
-    <li class="hotel">Hotel Check-in</li>
+    <li>Arrival and check-in</li>
+    <li>Meiji Shrine</li>
+    <li>Yoyogi Park</li>
+    <li>Imperial Palace</li>
+    <li>Ueno Park (Evening)</li>
+    <li>Asakusa</li>
+    <li>Shibuya Crossing</li>
   </ul>
-  <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Tokyo_Map.png" alt="Tokyo Map">
-</details>
+</div>
 
-<details>
-  <summary>April 19 - Mt. Fuji & Sakura Ropeway</summary>
+<div class="day">
+  <h2>April 19 - Mount Fuji</h2>
   <ul>
-    <li>🚐 Mt. Fuji exploration</li>
-    <li>Sakura Ropeway</li>
-    <li>Wisteria viewing</li>
+    <li>Mount Fuji Viewpoint</li>
+    <li>Sakura Ropeway Experience</li>
   </ul>
-</details>
+</div>
 
-<details>
-  <summary>April 20 - Mt. Fuji & Hakone</summary>
+<div class="day">
+  <h2>April 20 - Hakone</h2>
   <ul>
-    <li>🚐 Full day trip to Hakone</li>
+    <li>Full-day exploration around Mt. Fuji and Hakone</li>
   </ul>
-</details>
+</div>
 
-<details>
-  <summary>April 21 - Tokyo Disney Resort</summary>
+<div class="day">
+  <h2>April 21 - DisneyLand + Wisteria</h2>
   <ul>
-    <li>🎢 Visit to Disneyland</li>
+    <li>Visit to Tokyo Disneyland</li>
+    <li>Evening trip to Wisteria Park</li>
   </ul>
-</details>
+</div>
 
-<details>
-  <summary>April 22 - Wisteria Gardens</summary>
+<div class="day">
+  <h2>April 22 - Wisteria</h2>
   <ul>
-    <li>🌺 Wisteria viewing at Ashikaga Flower Park</li>
+    <li>Wisteria flower viewing experience</li>
   </ul>
-</details>
+</div>
 
-<details>
-  <summary>April 23 - Flight to Hakodate & Local Exploration</summary>
+<div class="day">
+  <h2>April 23 - Hakodate</h2>
   <ul>
-    <li class="flight">Flight from Tokyo to Hakodate (7:15 AM - 8:35 AM)</li>
-    <li class="hotel">Check-in at JR Inn Hakodate</li>
+    <li>Flight from Tokyo Haneda to Hakodate: 7:15 AM – 8:35 AM</li>
+    <li>Check-in at JR Inn Hakodate</li>
     <li>Local exploration in Hakodate</li>
   </ul>
-</details>
+</div>
 
-<details>
-  <summary>April 24 - Hokkaido Day Tour</summary>
+<div class="day">
+  <h2>April 24 - Hakodate Cherry Blossom Tour</h2>
   <ul>
-    <li>🌅 Cape Tachimachi (07:50 Departure)</li>
-    <li>🏯 Matsumae Castle Ruins (11:00 AM)</li>
-    <li>🏝️ Seagull Island (13:20 PM)</li>
-    <li>🌸 Goryokaku Park (16:00 PM)</li>
+    <li>07:50 - Departure</li>
+    <li>08:15 - Cape Tachimachi: Panoramic sea cliff view</li>
+    <li>11:00 - Matsumae Castle: Historical Edo-era site</li>
+    <li>13:20 - Kamome (Seagull) Island: Scenic walking trails</li>
+    <li>16:00 - Goryokaku Park: Star-shaped fortress and cherry blossoms</li>
   </ul>
-  <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Hokkaido_map.png" alt="Hokkaido Map">
-</details>
+</div>
 
-<details>
-  <summary>April 25 - Travel to Kyoto</summary>
+<div class="day">
+  <h2>April 25 - Travel to Kyoto</h2>
   <ul>
-    <li class="flight">Flight from Hakodate to Haneda (9:10 - 10:40)</li>
-    <li class="transport">Bullet train: Haneda → Shinagawa → Kyoto (12:07 - 12:15)</li>
-    <li class="hotel">Check-in at Hotel Solero Nichetsu</li>
-    <li>🍵 Tea ceremony & Kimono experience</li>
-    <li>Local Kyoto exploration</li>
+    <li>Flight: Hakodate to Tokyo Haneda - 09:10 AM to 10:40 AM</li>
+    <li>Bullet train from Tokyo Haneda to Shinagawa</li>
+    <li>Shinagawa to Kyoto via bullet train: 12:07 PM – 12:15 PM</li>
+    <li>Check-in to Hotel Solare Nichietsu</li>
+    <li>Local exploration</li>
+    <li>Tea and Kimono Ceremony</li>
   </ul>
-</details>
+</div>
 
-<details>
-  <summary>April 26 - Kyoto & Nara Day Tour</summary>
+<div class="day">
+  <h2>April 27 - Kyoto Personalized Custom Tour</h2>
   <ul>
-    <li>🦌 Nara Park & Todai-ji Temple</li>
-    <li>🍽️ Lunch: Kobe Beef Shabu-Shabu / Free Time in Arashiyama</li>
-    <li>🎍 Bamboo Grove Walk in Arashiyama</li>
-    <li>🏯 Kinkaku-ji Temple (Golden Pavilion)</li>
+    <li>🚌 <strong>08:20 AM:</strong> Departure by bus</li>
+    <li>🕰️ <strong>20 min(s):</strong> Nijō Castle (Guided tour - 50 min)
+      <ul>
+        <li>A World Heritage Site, the historic castle was completed in 1626. This castle was built as a residence for the Tokugawa Shogun and as a palladium for the Kyoto Imperial Palace.</li>
+      </ul>
+    </li>
+    <li>🚌 <strong>20 min(s):</strong> Golden Pavilion Temple (Guided tour - 45 min)
+      <ul>
+        <li>A World Heritage site. The wooden architecture is covered in thin layers of pure gold and is surrounded by a beautiful pond.</li>
+      </ul>
+    </li>
+    <li>🚌 <strong>15 min(s):</strong> Kyoto Imperial Palace (Guided tour - 40 min)
+      <ul>
+        <li>See the Kyoto Imperial Palace, which was used as the Emperor's residence until about 150 years ago. When the Kyoto Imperial Palace is closed to visitors, the tour will visit Kitano Tenmangu Shrine.</li>
+      </ul>
+    </li>
+    <li>🚌 <strong>20 min(s):</strong> Lunch (1 hour)
+      <ul>
+        <li>The tour will stop for free time in Kyoto Station. Lunch is NOT included in the tour.</li>
+      </ul>
+    </li>
+    <li>🚌 <strong>15 min(s):</strong> Fushimi Inari Taisha (Guided tour - 30 min)
+      <ul>
+        <li>Fushimi Inari Taisha is the head shrine of some 40,000 inari-jinja shrines located all over Japan. The bright red Senbon Torii gates are a must-see attraction.</li>
+      </ul>
+    </li>
+    <li>🚌 <strong>15 min(s):</strong> Sanjusangen-do Temple (Guided tour - 30 min)
+      <ul>
+        <li>Visit the world's longest wooden structure, housing 1,001 life-size statues of Buddhist Kannon deities dating back to the 13th century.</li>
+      </ul>
+    </li>
+    <li>🚌 <strong>15 min(s):</strong> Kiyomizu-dera (Guided tour - 1 hour 10 min)
+      <ul>
+        <li>The view of Kyoto from the World Heritage Site of Kiyomizu-dera is superb. The historic shopping lane that leads to the temple adds to a wonderful experience.</li>
+      </ul>
+    </li>
+    <li>🚌 <strong>15 min(s):</strong> 18:00 - Return</li>
+    <li>⏰ *The schedule might change depending on traffic and weather conditions*</li>
   </ul>
-  <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Kyoto_map.png" alt="Kyoto Map">
-</details>
+</div>
 
 </body>
 </html>
