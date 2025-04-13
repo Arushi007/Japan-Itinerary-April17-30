@@ -1,124 +1,69 @@
-// Define the itinerary data with details about each location and their significance
-const itineraryData = [
-    {
-        date: "April 17",
-        title: "Flight from Delhi to Haneda Airport",
-        details: [
-            { time: "10:00 AM", event: "Depart from Indira Gandhi International Airport, Delhi" },
-            { time: "06:00 PM", event: "Arrival at Haneda Airport, Tokyo" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Haneda%20Airport&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 18",
-        title: "Tokyo",
-        details: [
-            { time: "08:00 AM", event: "Arrival and check-in" },
-            { time: "10:00 AM", event: "Visit to Meiji Shrine - A historical Shinto shrine dedicated to Emperor Meiji" },
-            { time: "12:00 PM", event: "Visit to Senso-ji Temple, Asakusa - Tokyo's oldest and most famous temple" },
-            { time: "02:00 PM", event: "Explore Ueno Park - Famous for cherry blossoms and museums" },
-            { time: "04:00 PM", event: "Visit Shibuya Crossing - Iconic pedestrian crossing in Tokyo" },
-            { time: "06:00 PM", event: "Free time for dinner and exploration" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Meiji%20Shrine&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 19",
-        title: "Mount Fuji",
-        details: [
-            { time: "09:00 AM", event: "Mount Fuji Viewpoint - Scenic view of Japan's iconic mountain" },
-            { time: "11:00 AM", event: "Sakura Ropeway Experience - Ride the ropeway for breathtaking views" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Mount%20Fuji&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 20",
-        title: "Hakone",
-        details: [
-            { time: "08:00 AM", event: "Full-day exploration around Mt. Fuji and Hakone - Famous for hot springs and views of Mt. Fuji" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Hakone&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 21",
-        title: "DisneyLand + Wisteria",
-        details: [
-            { time: "09:00 AM", event: "Visit to Tokyo Disneyland - Enjoy themed rides and attractions" },
-            { time: "05:00 PM", event: "Evening trip to Wisteria Park - A scenic park known for its beautiful Wisteria flowers" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Tokyo%20Disneyland&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 22",
-        title: "Wisteria",
-        details: [
-            { time: "09:00 AM", event: "Wisteria flower viewing experience - Experience the beauty of the Wisteria flowers" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Wisteria%20Park&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 23",
-        title: "Hakodate",
-        details: [
-            { time: "07:15 AM", event: "Flight from Tokyo Haneda to Hakodate" },
-            { time: "08:35 AM", event: "Check-in at JR Inn Hakodate" },
-            { time: "10:00 AM", event: "Local exploration in Hakodate" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Hakodate&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 24",
-        title: "Hakodate Cherry Blossom Tour",
-        details: [
-            { time: "07:50 AM", event: "Departure" },
-            { time: "08:15 AM", event: "Cape Tachimachi - Panoramic sea cliff view" },
-            { time: "11:00 AM", event: "Matsumae Castle - Historical Edo-era site" },
-            { time: "01:20 PM", event: "Kamome (Seagull) Island - Scenic walking trails" },
-            { time: "04:00 PM", event: "Goryokaku Park - Star-shaped fortress and cherry blossoms" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Goryokaku%20Park&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 25",
-        title: "Travel to Kyoto",
-        details: [
-            { time: "09:10 AM", event: "Flight from Hakodate to Tokyo Haneda" },
-            { time: "10:40 AM", event: "Arrival in Tokyo" },
-            { time: "12:07 PM", event: "Bullet train from Tokyo Haneda to Shinagawa" },
-            { time: "02:00 PM", event: "Check-in at Hotel Solare Nichietsu" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Kyoto&key=YOUR_API_KEY"
-    },
-    {
-        date: "April 30",
-        title: "Return from Osaka to Delhi",
-        details: [
-            { time: "08:00 AM", event: "Check-out from W Osaka Hotel" },
-            { time: "09:00 AM", event: "Depart for Kansai International Airport (KIX)" },
-            { time: "11:00 AM", event: "Arrive at Kansai International Airport" },
-            { time: "01:00 PM", event: "Flight departure from Kansai Airport (KIX) to Hong Kong" }
-        ],
-        mapLink: "https://www.google.com/maps/embed/v1/place?q=Kansai%20International%20Airport&key=YOUR_API_KEY"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan Travel Itinerary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
     }
-];
+    h1 {
+      text-align: center;
+      color: #1f5ea8;
+    }
+    .day {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #1f5ea8;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 25px;
+    }
+    li::before {
+      content: '\1F5FA'; /* map symbol */
+      position: absolute;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
 
-// Populate the itinerary dynamically using JavaScript
-const itineraryContainer = document.getElementById('itinerary');
+<h1>Japan Travel Itinerary</h1>
 
-itineraryData.forEach(item => {
-    const itemDiv = document.createElement('div');
-    itemDiv.classList.add('itinerary-item');
+<div class="day">
+  <h2>April 17 - Flight from Delhi to Haneda</h2>
+  <ul>
+    <li>Depart from Delhi to Haneda Airport</li>
+    <li>Settle into Tokyo hotel</li>
+  </ul>
+</div>
 
-    const title = document.createElement('h2');
-    title.innerHTML = item.date + " - " + item.title;
-    itemDiv.appendChild(title);
+<div class="day">
+  <h2>April 18 - Tokyo Sightseeing</h2>
+  <ul>
+    <li>Asakusa & Sensoji Temple – One of Tokyo’s most iconic temples</li>
+    <li>Ueno Park – Cherry blossoms, museums, and zoo</li>
+    <li>Shibuya Crossing – The world’s busiest pedestrian crossing</li>
+  </ul>
+</div>
 
-    const detailsList = document.createElement('ul');
-    item.details.forEach(detail => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<strong>${detail.time}</strong>: ${detail.event}`;
-        detailsList.appendChild(listItem);
-    });
-    itemDiv.appendChild(detailsList);
-
-    const mapContainer = document
+<div class="day">
+  <h2>April 19 - Moun
