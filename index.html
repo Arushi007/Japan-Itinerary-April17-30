@@ -7,19 +7,27 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
+      background: linear-gradient(to bottom right, #ffeef3, #f8f0ff), url('https://images.unsplash.com/photo-1584600111039-098e8d57fdfb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
       color: #333;
       padding: 20px;
       line-height: 1.6;
     }
     h1 {
       text-align: center;
-      color: #1f5ea8;
+      color: #d6336c;
+      text-shadow: 1px 1px 2px #fff;
     }
     h2 {
-      color: #1f5ea8;
+      color: #d6336c;
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 10px;
+      border-radius: 8px;
     }
     ul {
       list-style: none;
@@ -27,16 +35,14 @@
     }
     li {
       margin-bottom: 15px;
-      position: relative;
-      padding-left: 25px;
-    }
-    li::before {
-      content: '🌸';
-      position: absolute;
-      left: 0;
+      padding-left: 0;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     .day {
-      background-color: #ffffff;
+      background-color: #ffffffcc;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       padding: 20px;
@@ -45,7 +51,7 @@
     .button {
       display: inline-block;
       padding: 10px 15px;
-      background-color: #1f5ea8;
+      background-color: #d6336c;
       color: white;
       border-radius: 6px;
       text-decoration: none;
@@ -58,6 +64,12 @@
       border-radius: 12px;
       margin-top: 15px;
     }
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
@@ -65,127 +77,143 @@
 <h1>Japan Travel Itinerary</h1>
 
 <div class="day">
-  <h2>April 17 - Flight from Delhi to Haneda Airport</h2>
+  <h2>April 17 - Arrival in Tokyo</h2>
+  <img src="https://images.unsplash.com/photo-1578887494465-49e1741d0702" alt="Tokyo Skyline" class="image">
   <ul>
-    <li>🛫 <strong>10:00 AM:</strong> Depart from Indira Gandhi International Airport</li>
-    <li>🛬 <strong>10:00 PM:</strong> Arrive at Haneda Airport, Tokyo</li>
-    <li>🚗 Transfer to hotel</li>
+    <li><strong>10:00 AM:</strong> Arrive in Tokyo, Japan. After checking into your hotel, spend the rest of the day acclimating and exploring the local neighborhood.</li>
+    <li><strong>02:00 PM:</strong> Head out for a quick tour of the iconic Shibuya Crossing and enjoy shopping in the surrounding area.</li>
+    <li><strong>06:00 PM:</strong> Dinner at a traditional Japanese restaurant in Shibuya, serving sushi and sashimi.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 18 - Asakusa, Sensoji Temple, Ueno, Shibuya</h2>
+  <h2>April 18 - Exploring Tokyo: Asakusa and Odaiba</h2>
+  <img src="https://images.unsplash.com/photo-1571315942708-cda156799557" alt="Asakusa Temple" class="image">
   <ul>
-    <li>🛕 Visit Sensoji Temple, Tokyo's oldest temple</li>
-    <li>🌳 Explore Ueno Park and its museums</li>
-    <li>🌆 Experience the Shibuya Crossing and Hachiko Statue</li>
-  </ul>
-  <iframe src="https://www.google.com/maps/d/embed?mid=1kH3nCXZZkeSDt9cmIfg4OlY6-0GhJys&ehbc=2E312F"></iframe>
-</div>
-
-<div class="day">
-  <h2>April 19 - Mount Fuji Day Trip</h2>
-  <ul>
-    <li>🗻 Travel to Kawaguchiko area for Mount Fuji views</li>
-    <li>🚠 Ride the Mount Fuji Panoramic Ropeway</li>
-    <li>🛍️ Visit Fuji-Q Highland or Lake Kawaguchi</li>
+    <li><strong>09:00 AM:</strong> Visit the famous Asakusa Temple and explore the Nakamise shopping street. Don’t forget to try some traditional Japanese snacks!</li>
+    <li><strong>12:00 PM:</strong> Head to Odaiba for a futuristic shopping experience and sightseeing at teamLab Borderless, a digital art museum.</li>
+    <li><strong>06:00 PM:</strong> Dinner at Odaiba’s waterfront, overlooking the Rainbow Bridge.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 20 - Kyoto: Fushimi Inari & Gion</h2>
+  <h2>April 19 - Mt. Fuji</h2>
+  <img src="https://images.unsplash.com/photo-1565648711-ffb9f3d3489e" alt="Mt. Fuji" class="image">
   <ul>
-    <li>🚄 Take a bullet train to Kyoto</li>
-    <li>⛩️ Visit Fushimi Inari Shrine with its thousands of Torii gates</li>
-    <li>🎎 Explore Gion District in the evening</li>
+    <li><strong>09:00 AM:</strong> Take a day trip to Mt. Fuji. Start your journey by visiting the Fuji Five Lakes area and enjoy stunning views of the mountain.</li>
+    <li><strong>12:00 PM:</strong> Visit the Chureito Pagoda for a panoramic view of Mt. Fuji. Don’t forget your camera!</li>
+    <li><strong>03:00 PM:</strong> Explore the nearby hot springs and relax in the natural mineral baths.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 21 - Arashiyama Bamboo Forest & Monkey Park</h2>
+  <h2>April 20 - Mt. Fuji and Surrounding Area</h2>
+  <img src="https://images.unsplash.com/photo-1517728490030-f76d9932029f" alt="Mt. Fuji" class="image">
   <ul>
-    <li>🎍 Walk through Arashiyama Bamboo Grove</li>
-    <li>🐒 Visit Iwatayama Monkey Park</li>
-    <li>🛶 Optional boat ride on the Hozugawa River</li>
+    <li><strong>09:00 AM:</strong> Take a hike around the foothills of Mt. Fuji and enjoy the scenic views of the surrounding nature.</li>
+    <li><strong>12:00 PM:</strong> Visit the Oshino Hakkai village, a UNESCO World Heritage site with beautiful ponds and old traditional houses.</li>
+    <li><strong>03:00 PM:</strong> Head back to Tokyo in the evening, preparing for the next day's adventure at Tokyo Disneyland!</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 22 - Nara Day Trip</h2>
+  <h2>April 21 - Tokyo Disneyland</h2>
+  <img src="https://images.unsplash.com/photo-1574103895392-dce6e59374ef" alt="Tokyo Disneyland" class="image">
   <ul>
-    <li>🦌 Feed the deer in Nara Park</li>
-    <li>⛩️ Visit Todai-ji Temple with the Great Buddha</li>
-    <li>🌸 Relax in Isuien Garden</li>
+    <li><strong>09:00 AM:</strong> **Arrival at Tokyo Disneyland** - Start your day at one of the most iconic theme parks in the world. Spend the day experiencing the magic of Disney, from meeting beloved characters to enjoying thrilling rides.</li>
+    <li><strong>12:00 PM:</strong> **Lunch at Disneyland** - Enjoy a variety of Disney-themed meals and snacks. Don’t miss out on classic Disney park food!</li>
+    <li><strong>03:00 PM:</strong> **Explore Fantasyland and Tomorrowland** - Take time to explore the themed areas of the park.</li>
+    <li><strong>06:00 PM:</strong> **Disney Parade and Fireworks** - Watch the spectacular Disney parade followed by an enchanting fireworks display.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 23 - Kyoto to Osaka</h2>
+  <h2>April 22 - Wisteria Ashikaga Flower Park</h2>
+  <img src="https://images.unsplash.com/photo-1551553128-b709739dfed5" alt="Wisteria Ashikaga Flower Park" class="image">
   <ul>
-    <li>🚅 Take train to Osaka</li>
-    <li>🌇 Explore Dotonbori, famous for neon lights & food</li>
-    <li>🍜 Try local delicacies like takoyaki and okonomiyaki</li>
+    <li><strong>09:00 AM:</strong> **Arrive at Ashikaga Flower Park** - Explore the stunning Wisteria Ashikaga Flower Park, famous for its magnificent wisteria blossoms in full bloom.</li>
+    <li><strong>11:00 AM:</strong> **Wisteria Tunnel** - Walk through the beautiful wisteria tunnel, a captivating sight with hanging flowers.</li>
+    <li><strong>12:30 PM:</strong> **Lunch at the Park** - Enjoy lunch at the park's restaurant while admiring the surrounding flowers.</li>
+    <li><strong>02:00 PM:</strong> **Explore the Park** - Visit other flower displays and enjoy the picturesque scenery of the park.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 24 - Osaka: Aquarium & Tempozan Ferris Wheel</h2>
+  <h2>April 23 - Kyoto - Visit Fushimi Inari Shrine</h2>
+  <img src="https://images.unsplash.com/photo-1579106402510-8e3c1f828a79" alt="Fushimi Inari Shrine" class="image">
   <ul>
-    <li>🐠 Visit Osaka Aquarium Kaiyukan</li>
-    <li>🎡 Ride the Tempozan Ferris Wheel</li>
-    <li>🛍️ Explore shopping at Tempozan Marketplace</li>
+    <li><strong>09:00 AM:</strong> Travel to Kyoto and head to the Fushimi Inari Shrine, famous for its endless rows of red torii gates.</li>
+    <li><strong>12:00 PM:</strong> Climb the mountain to reach the top, offering scenic views of the city and surrounding areas.</li>
+    <li><strong>03:00 PM:</strong> Explore the shrine and its smaller temples. You can also purchase souvenirs from local vendors.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 25 - Osaka to Hiroshima & Miyajima</h2>
+  <h2>April 24 - Kyoto - Kinkaku-ji (Golden Pavilion)</h2>
+  <img src="https://images.unsplash.com/photo-1530061250980-1f626ecf8046" alt="Kinkaku-ji" class="image">
   <ul>
-    <li>🚄 Bullet train to Hiroshima</li>
-    <li>☮️ Visit Hiroshima Peace Memorial Park</li>
-    <li>⛩️ Ferry to Miyajima Island, see Itsukushima Shrine</li>
+    <li><strong>09:00 AM:</strong> Visit the iconic Kinkaku-ji (Golden Pavilion) in Kyoto, a Zen Buddhist temple covered in gold leaf and surrounded by beautiful gardens and ponds.</li>
+    <li><strong>12:00 PM:</strong> Enjoy a peaceful walk around the grounds, taking in the serene atmosphere and stunning architecture.</li>
+    <li><strong>03:00 PM:</strong> Have lunch at a nearby restaurant offering traditional Kyoto-style cuisine.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 26 - Return to Osaka</h2>
+  <h2>April 25 - Kyoto - Arashiyama Bamboo Grove</h2>
+  <img src="https://images.unsplash.com/photo-1570076128907-b3328baf9538" alt="Arashiyama Bamboo Grove" class="image">
   <ul>
-    <li>🚄 Return by train from Hiroshima</li>
-    <li>🌆 Free evening in Osaka</li>
+    <li><strong>09:00 AM:</strong> Head to Arashiyama and explore the famous Bamboo Grove, a serene forest of tall bamboo stalks that create a tranquil, almost otherworldly atmosphere.</li>
+    <li><strong>12:00 PM:</strong> Take a walk along the river or visit the nearby Tenryu-ji Temple.</li>
+    <li><strong>03:00 PM:</strong> Enjoy some quiet time in the grove, then have lunch at a nearby restaurant.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 27 - Day trip to Kobe</h2>
+  <h2>April 26 - Nara Day Trip</h2>
+  <img src="https://images.unsplash.com/photo-1587947242212-4456e8edbe1f" alt="Nara Park" class="image">
   <ul>
-    <li>🚆 Visit Kobe Harborland</li>
-    <li>🥩 Try Kobe beef</li>
-    <li>🧀 Explore the ropeway or Nunobiki Herb Garden</li>
+    <li><strong>09:00 AM:</strong> Take a day trip to Nara, known for its friendly deer and beautiful temples.</li>
+    <li><strong>11:00 AM:</strong> Visit Todai-ji Temple, home to the largest bronze Buddha statue in Japan.</li>
+    <li><strong>01:00 PM:</strong> Spend time exploring Nara Park, feeding the deer and enjoying the serene environment.</li>
+    <li><strong>03:00 PM:</strong> Visit Kasuga Taisha Shrine, a beautiful and tranquil location with hundreds of stone lanterns.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 28 - Namba and Shopping</h2>
+  <h2>April 27 - Osaka</h2>
+  <img src="https://images.unsplash.com/photo-1603052872809-e20a04c9b9e1" alt="Osaka Castle" class="image">
   <ul>
-    <li>🛍️ Spend the day shopping in Namba and Shinsaibashi</li>
-    <li>🎭 Enjoy street performances and food stalls</li>
+    <li><strong>09:00 AM:</strong> Visit Osaka Castle, one of Japan's most famous landmarks, known for its impressive architecture and beautiful surrounding park.</li>
+    <li><strong>12:00 PM:</strong> Explore the nearby Osaka Museum of History for a deeper understanding of the city's culture.</li>
+    <li><strong>03:00 PM:</strong> Stroll through the bustling Dotonbori district and enjoy some street food, such as takoyaki and okonomiyaki.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 29 - Osaka Castle & Universal Studios</h2>
+  <h2>April 28 - Osaka - Universal Studios Japan</h2>
+  <img src="https://images.unsplash.com/photo-1537356747306-b85e47604566" alt="Universal Studios Japan" class="image">
   <ul>
-    <li>🏯 Visit Osaka Castle</li>
-    <li>🎢 Head to Universal Studios Japan</li>
-    <li>🍜 Dinner and walk at Dotonbori Market</li>
+    <li><strong>09:00 AM:</strong> Spend the day at Universal Studios Japan, experiencing exciting attractions like Harry Potter World and Jurassic Park.</li>
+    <li><strong>12:00 PM:</strong> Have lunch at one of the themed restaurants within the park.</li>
+    <li><strong>06:00 PM:</strong> End your day with a night parade and the park's spectacular evening show.</li>
   </ul>
 </div>
 
 <div class="day">
-  <h2>April 30 - Return to Delhi</h2>
+  <h2>April 29 - Hiroshima Peace Memorial Park</h2>
+  <img src="https://images.unsplash.com/photo-1578910520702-8e02810b2155" alt="Hiroshima Peace Memorial" class="image">
   <ul>
-    <li>✈️ Fly from Kansai International Airport to Hong Kong</li>
-    <li>🕐 2-hour layover in Hong Kong</li>
-    <li>✈️ Continue flight to Delhi</li>
+    <li><strong>09:00 AM:</strong> Visit the Hiroshima Peace Memorial Park, dedicated to the victims of the atomic bombing in 1945. Explore the Peace Memorial Museum and the iconic Atomic Bomb Dome.</li>
+    <li><strong>12:00 PM:</strong> Pay your respects at the Cenotaph for the A-bomb victims.</li>
+    <li><strong>03:00 PM:</strong> Spend time reflecting at the Peace Memorial Park and visit the surrounding gardens.</li>
+  </ul>
+</div>
+
+<div class="day">
+  <h2>April 30 - Departure</h2>
+  <img src="https://images.unsplash.com/photo-1580420610951-9f75ed12c34f" alt="Departure" class="image">
+  <ul>
+    <li><strong>09:00 AM:</strong> After breakfast, head to the airport for your flight back home.</li>
   </ul>
 </div>
 
