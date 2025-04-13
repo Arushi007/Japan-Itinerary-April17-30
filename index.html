@@ -109,7 +109,44 @@
         .day-navigation button:hover {
             background-color: #ff4500;
         }
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
     </style>
+    <script>
+        // Interactive Map Integration (using Google Maps API)
+        function initMap() {
+            const tokyo = { lat: 35.6762, lng: 139.6503 }; // Coordinates for Tokyo
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: tokyo,
+            });
+            const marker = new google.maps.Marker({
+                position: tokyo,
+                map: map,
+                title: "Tokyo",
+            });
+        }
+
+        // Show map when the "Show Map" button is clicked
+        function toggleMap() {
+            const mapElement = document.getElementById("map");
+            if (mapElement.style.display === "none" || mapElement.style.display === "") {
+                mapElement.style.display = "block";
+                initMap(); // Initialize map when shown
+            } else {
+                mapElement.style.display = "none";
+            }
+        }
+
+        // Show more details for each activity
+        function showActivityDetails(activity) {
+            alert(activity + " details coming soon!");
+        }
+    </script>
 </head>
 <body>
 
@@ -122,17 +159,20 @@
         <h2>April 18: Tokyo Exploration</h2>
         <p><strong>Arrival at Sequence Iyashita Hotel - 17:00</strong></p>
         <div class="image-gallery">
-            <img src="https://via.placeholder.com/800x400?text=Sequence+Iyashita+Hotel" alt="Sequence Iyashita Hotel" onclick="alert('Sequence Iyashita Hotel details')">
-            <img src="https://via.placeholder.com/800x400?text=Meiji+Shrine" alt="Meiji Shrine" onclick="alert('Meiji Shrine details')">
+            <img src="https://via.placeholder.com/800x400?text=Sequence+Iyashita+Hotel" alt="Sequence Iyashita Hotel" onclick="showActivityDetails('Sequence Iyashita Hotel')">
+            <img src="https://via.placeholder.com/800x400?text=Meiji+Shrine" alt="Meiji Shrine" onclick="showActivityDetails('Meiji Shrine')">
         </div>
 
         <h3>Activities:</h3>
         <ul>
-            <li><strong>Meiji Shrine</strong> - 17:30–19:00 (A peaceful shrine nestled in nature.)</li>
-            <li><strong>Yoyogi Park</strong> - 19:00–19:30 (Relax with a stroll in this spacious park.)</li>
-            <li><strong>Asakusa Sensoji Temple</strong> - 19:45–20:30 (Explore one of Tokyo's oldest temples.)</li>
-            <li><strong>Takeshita Street</strong> - 21:45–22:30 (A vibrant street filled with shops and food stalls.)</li>
+            <li onclick="showActivityDetails('Meiji Shrine')"><strong>Meiji Shrine</strong> - 17:30–19:00 (A peaceful shrine nestled in nature.)</li>
+            <li onclick="showActivityDetails('Yoyogi Park')"><strong>Yoyogi Park</strong> - 19:00–19:30 (Relax with a stroll in this spacious park.)</li>
+            <li onclick="showActivityDetails('Asakusa Sensoji Temple')"><strong>Asakusa Sensoji Temple</strong> - 19:45–20:30 (Explore one of Tokyo's oldest temples.)</li>
+            <li onclick="showActivityDetails('Takeshita Street')"><strong>Takeshita Street</strong> - 21:45–22:30 (A vibrant street filled with shops and food stalls.)</li>
         </ul>
+
+        <button onclick="toggleMap()">Toggle Map</button>
+        <div id="map" style="display: none;"></div>
     </div>
 </section>
 
@@ -141,16 +181,16 @@
         <h2>April 19: Mt. Fuji & Oshino Hakkai Adventure</h2>
         <p><strong>Departure: 07:15 AM from Shinjuku</strong></p>
         <div class="image-gallery">
-            <img src="https://via.placeholder.com/800x400?text=Shinjuku" alt="Shinjuku" onclick="alert('Shinjuku details')">
-            <img src="https://via.placeholder.com/800x400?text=Mt+Fuji" alt="Mt Fuji" onclick="alert('Mt. Fuji details')">
+            <img src="https://via.placeholder.com/800x400?text=Shinjuku" alt="Shinjuku" onclick="showActivityDetails('Shinjuku')">
+            <img src="https://via.placeholder.com/800x400?text=Mt+Fuji" alt="Mt Fuji" onclick="showActivityDetails('Mt. Fuji')">
         </div>
         
         <h3>Activities:</h3>
         <ul>
-            <li><strong>Fruit Picking & Flower Viewing</strong> - 08:30–10:00 (Enjoy picking fruits and viewing seasonal flowers.)</li>
-            <li><strong>Mt. Fuji 5th Station</strong> - 10:30–12:00 (Stunning views from the 5th station of Mt. Fuji.)</li>
-            <li><strong>Kachi-Kachi Ropeway</strong> - 12:30–13:00 (A scenic ride offering breathtaking views.)</li>
-            <li><strong>Oshino Hakkai</strong> - 14:30–16:00 (Natural springs with picturesque views of Mt. Fuji.)</li>
+            <li onclick="showActivityDetails('Fruit Picking & Flower Viewing')"><strong>Fruit Picking & Flower Viewing</strong> - 08:30–10:00 (Enjoy picking fruits and viewing seasonal flowers.)</li>
+            <li onclick="showActivityDetails('Mt. Fuji 5th Station')"><strong>Mt. Fuji 5th Station</strong> - 10:30–12:00 (Stunning views from the 5th station of Mt. Fuji.)</li>
+            <li onclick="showActivityDetails('Kachi-Kachi Ropeway')"><strong>Kachi-Kachi Ropeway</strong> - 12:30–13:00 (A scenic ride offering breathtaking views.)</li>
+            <li onclick="showActivityDetails('Oshino Hakkai')"><strong>Oshino Hakkai</strong> - 14:30–16:00 (Natural springs with picturesque views of Mt. Fuji.)</li>
         </ul>
     </div>
 </section>
@@ -160,17 +200,17 @@
         <h2>April 20: Mt. Fuji & Hakone Day Tour</h2>
         <p><strong>Departure: 08:00 AM from Shinjuku</strong></p>
         <div class="image-gallery">
-            <img src="https://via.placeholder.com/800x400?text=Hakone+Pirate+Ship" alt="Hakone Pirate Ship" onclick="alert('Hakone Pirate Ship details')">
-            <img src="https://via.placeholder.com/800x400?text=Lake+Yamanaka" alt="Lake Yamanaka" onclick="alert('Lake Yamanaka details')">
+            <img src="https://via.placeholder.com/800x400?text=Hakone+Pirate+Ship" alt="Hakone Pirate Ship" onclick="showActivityDetails('Hakone Pirate Ship')">
+            <img src="https://via.placeholder.com/800x400?text=Lake+Yamanaka" alt="Lake Yamanaka" onclick="showActivityDetails('Lake Yamanaka')">
         </div>
 
         <h3>Activities:</h3>
         <ul>
-            <li><strong>Hakone Shrine & Sea Torii Gate</strong> - 10:30–12:00 (A beautiful shrine with views of Mt. Fuji.)</li>
-            <li><strong>Hakone Pirate Ship</strong> - 12:10–12:40 (Cruise on Lake Ashi with stunning views.)</li>
-            <li><strong>Owakudani</strong> - 13:10–14:00 (Experience the volcanic atmosphere and enjoy Mt. Fuji views.)</li>
-            <li><strong>Lake Yamanaka</strong> - 15:00–15:30 (A perfect spot for photos with swans and Mt. Fuji.)</li>
-            <li><strong>Oshino Hakkai</strong> - 15:40–16:20 (Iconic natural springs at the base of Mt. Fuji.)</li>
+            <li onclick="showActivityDetails('Hakone Shrine & Sea Torii Gate')"><strong>Hakone Shrine & Sea Torii Gate</strong> - 10:30–12:00 (A beautiful shrine with views of Mt. Fuji.)</li>
+            <li onclick="showActivityDetails('Hakone Pirate Ship')"><strong>Hakone Pirate Ship</strong> - 12:10–12:40 (Cruise on Lake Ashi with stunning views.)</li>
+            <li onclick="showActivityDetails('Owakudani')"><strong>Owakudani</strong> - 13:10–14:00 (Experience the volcanic atmosphere and enjoy Mt. Fuji views.)</li>
+            <li onclick="showActivityDetails('Lake Yamanaka')"><strong>Lake Yamanaka</strong> - 15:00–15:30 (A perfect spot for photos with swans and Mt. Fuji.)</li>
+            <li onclick="showActivityDetails('Oshino Hakkai')"><strong>Oshino Hakkai</strong> - 15:40–16:20 (Iconic natural springs at the base of Mt. Fuji.)</li>
         </ul>
     </div>
 </section>
@@ -186,6 +226,9 @@
 <footer>
     <p>&copy; 2025 Japan Travel Itinerary | All Rights Reserved</p>
 </footer>
+
+<!-- Google Maps API script -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 
 </body>
 </html>
