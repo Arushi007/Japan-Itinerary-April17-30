@@ -4,231 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japan Travel Itinerary | April 18 - 20</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9fbfd;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #2c3e50;
         }
         header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #fff3eb;
+            padding: 10px;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 20px;
             background-color: #ff6347;
             color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 2.5em;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
             font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        nav button:hover {
+            background-color: #e5533d;
         }
         section {
-            padding: 30px 15px;
-            margin: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
         }
         .day {
-            background-color: #fdfdfd;
+            background-color: #ffffff;
             padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         .day h2 {
             color: #ff6347;
-            font-size: 1.8em;
             margin-bottom: 10px;
         }
         .day p {
-            font-size: 1.1em;
             color: #555;
         }
-        .day img {
-            max-width: 100%;
-            border-radius: 10px;
+        .toggle-details {
+            background-color: #feb47b;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
             margin-top: 10px;
         }
-        ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            color: #444;
+        .details {
+            display: none;
+            margin-top: 15px;
         }
-        li {
-            margin-bottom: 12px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #ff6347;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2em;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #ff4500;
-        }
-        footer {
-            background-color: #ff6347;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
+        iframe {
             width: 100%;
-        }
-        .image-gallery {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-        }
-        .image-gallery img {
-            width: 300px;
+            height: 300px;
+            border: none;
             border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .image-gallery img:hover {
-            transform: scale(1.1);
-        }
-        .day-navigation {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .day-navigation button {
-            background-color: #ff6347;
-            color: white;
-            padding: 12px 20px;
-            font-size: 1.2em;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .day-navigation button:hover {
-            background-color: #ff4500;
-        }
-        #map {
-            height: 400px;
-            width: 100%;
-            margin-top: 20px;
-            border-radius: 10px;
+            margin-top: 15px;
         }
     </style>
-    <script>
-        // Interactive Map Integration (using Google Maps API)
-        function initMap() {
-            const tokyo = { lat: 35.6762, lng: 139.6503 }; // Coordinates for Tokyo
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 10,
-                center: tokyo,
-            });
-            const marker = new google.maps.Marker({
-                position: tokyo,
-                map: map,
-                title: "Tokyo",
-            });
-        }
-
-        // Show map when the "Show Map" button is clicked
-        function toggleMap() {
-            const mapElement = document.getElementById("map");
-            if (mapElement.style.display === "none" || mapElement.style.display === "") {
-                mapElement.style.display = "block";
-                initMap(); // Initialize map when shown
-            } else {
-                mapElement.style.display = "none";
-            }
-        }
-
-        // Show more details for each activity
-        function showActivityDetails(activity) {
-            alert(activity + " details coming soon!");
-        }
-    </script>
 </head>
 <body>
+    <header>Japan Travel Itinerary | April 18 - 20</header>
+    <nav>
+        <button onclick="scrollToDay('day1')">April 18</button>
+        <button onclick="scrollToDay('day2')">April 19</button>
+        <button onclick="scrollToDay('day3')">April 20</button>
+    </nav>
 
-<header>
-    <h1>Japan Travel Itinerary | April 18 - 20</h1>
-</header>
-
-<section>
-    <div class="day">
-        <h2>April 18: Tokyo Exploration</h2>
-        <p><strong>Arrival at Sequence Iyashita Hotel - 17:00</strong></p>
-        <div class="image-gallery">
-            <img src="https://via.placeholder.com/800x400?text=Sequence+Iyashita+Hotel" alt="Sequence Iyashita Hotel" onclick="showActivityDetails('Sequence Iyashita Hotel')">
-            <img src="https://via.placeholder.com/800x400?text=Meiji+Shrine" alt="Meiji Shrine" onclick="showActivityDetails('Meiji Shrine')">
+    <section>
+        <div class="day" id="day1">
+            <h2>April 18 - Tokyo Exploration</h2>
+            <p>Visit Senso-ji Temple, shop in Harajuku, and enjoy sushi in Shibuya.</p>
+            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
+            <div class="details">
+                <ul>
+                    <li>Senso-ji Temple at 10 AM</li>
+                    <li>Harajuku Shopping Street at 1 PM</li>
+                    <li>Shibuya Crossing + Sushi Dinner at 6 PM</li>
+                </ul>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.734888824615!2d139.79665551525838!3d35.714765580184654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec1d262ad49%3A0xe91aaf1dcd8bbf77!2sSenso-ji!5e0!3m2!1sen!2sjp!4v1616514913164!5m2!1sen!2sjp"></iframe>
+            </div>
         </div>
 
-        <h3>Activities:</h3>
-        <ul>
-            <li onclick="showActivityDetails('Meiji Shrine')"><strong>Meiji Shrine</strong> - 17:30–19:00 (A peaceful shrine nestled in nature.)</li>
-            <li onclick="showActivityDetails('Yoyogi Park')"><strong>Yoyogi Park</strong> - 19:00–19:30 (Relax with a stroll in this spacious park.)</li>
-            <li onclick="showActivityDetails('Asakusa Sensoji Temple')"><strong>Asakusa Sensoji Temple</strong> - 19:45–20:30 (Explore one of Tokyo's oldest temples.)</li>
-            <li onclick="showActivityDetails('Takeshita Street')"><strong>Takeshita Street</strong> - 21:45–22:30 (A vibrant street filled with shops and food stalls.)</li>
-        </ul>
-
-        <button onclick="toggleMap()">Toggle Map</button>
-        <div id="map" style="display: none;"></div>
-    </div>
-</section>
-
-<section>
-    <div class="day">
-        <h2>April 19: Mt. Fuji & Oshino Hakkai Adventure</h2>
-        <p><strong>Departure: 07:15 AM from Shinjuku</strong></p>
-        <div class="image-gallery">
-            <img src="https://via.placeholder.com/800x400?text=Shinjuku" alt="Shinjuku" onclick="showActivityDetails('Shinjuku')">
-            <img src="https://via.placeholder.com/800x400?text=Mt+Fuji" alt="Mt Fuji" onclick="showActivityDetails('Mt. Fuji')">
-        </div>
-        
-        <h3>Activities:</h3>
-        <ul>
-            <li onclick="showActivityDetails('Fruit Picking & Flower Viewing')"><strong>Fruit Picking & Flower Viewing</strong> - 08:30–10:00 (Enjoy picking fruits and viewing seasonal flowers.)</li>
-            <li onclick="showActivityDetails('Mt. Fuji 5th Station')"><strong>Mt. Fuji 5th Station</strong> - 10:30–12:00 (Stunning views from the 5th station of Mt. Fuji.)</li>
-            <li onclick="showActivityDetails('Kachi-Kachi Ropeway')"><strong>Kachi-Kachi Ropeway</strong> - 12:30–13:00 (A scenic ride offering breathtaking views.)</li>
-            <li onclick="showActivityDetails('Oshino Hakkai')"><strong>Oshino Hakkai</strong> - 14:30–16:00 (Natural springs with picturesque views of Mt. Fuji.)</li>
-        </ul>
-    </div>
-</section>
-
-<section>
-    <div class="day">
-        <h2>April 20: Mt. Fuji & Hakone Day Tour</h2>
-        <p><strong>Departure: 08:00 AM from Shinjuku</strong></p>
-        <div class="image-gallery">
-            <img src="https://via.placeholder.com/800x400?text=Hakone+Pirate+Ship" alt="Hakone Pirate Ship" onclick="showActivityDetails('Hakone Pirate Ship')">
-            <img src="https://via.placeholder.com/800x400?text=Lake+Yamanaka" alt="Lake Yamanaka" onclick="showActivityDetails('Lake Yamanaka')">
+        <div class="day" id="day2">
+            <h2>April 19 - Mt. Fuji & Lake Kawaguchi</h2>
+            <p>Take a day trip to Mt. Fuji and enjoy scenic views at Lake Kawaguchi.</p>
+            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
+            <div class="details">
+                <ul>
+                    <li>Depart Tokyo at 8 AM</li>
+                    <li>Mt. Fuji 5th Station at 11 AM</li>
+                    <li>Lake Kawaguchi picnic at 1 PM</li>
+                </ul>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.282289145292!2d138.76644281525192!3d35.52720818023592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60194d3136e34a07%3A0xf73cfb6a86fc4da1!2sLake%20Kawaguchi!5e0!3m2!1sen!2sjp!4v1616515393439!5m2!1sen!2sjp"></iframe>
+            </div>
         </div>
 
-        <h3>Activities:</h3>
-        <ul>
-            <li onclick="showActivityDetails('Hakone Shrine & Sea Torii Gate')"><strong>Hakone Shrine & Sea Torii Gate</strong> - 10:30–12:00 (A beautiful shrine with views of Mt. Fuji.)</li>
-            <li onclick="showActivityDetails('Hakone Pirate Ship')"><strong>Hakone Pirate Ship</strong> - 12:10–12:40 (Cruise on Lake Ashi with stunning views.)</li>
-            <li onclick="showActivityDetails('Owakudani')"><strong>Owakudani</strong> - 13:10–14:00 (Experience the volcanic atmosphere and enjoy Mt. Fuji views.)</li>
-            <li onclick="showActivityDetails('Lake Yamanaka')"><strong>Lake Yamanaka</strong> - 15:00–15:30 (A perfect spot for photos with swans and Mt. Fuji.)</li>
-            <li onclick="showActivityDetails('Oshino Hakkai')"><strong>Oshino Hakkai</strong> - 15:40–16:20 (Iconic natural springs at the base of Mt. Fuji.)</li>
-        </ul>
-    </div>
-</section>
+        <div class="day" id="day3">
+            <h2>April 20 - Kyoto Culture</h2>
+            <p>Explore Fushimi Inari Shrine, Gion district, and enjoy a kaiseki dinner.</p>
+            <button class="toggle-details" onclick="toggleDetails(this)">Show Details</button>
+            <div class="details">
+                <ul>
+                    <li>Fushimi Inari Shrine at 9 AM</li>
+                    <li>Gion district stroll at 1 PM</li>
+                    <li>Kaiseki dinner at 6 PM</li>
+                </ul>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.098739286917!2d135.77269511524043!3d34.96713948037648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001089b233bdf17%3A0x92b92c4ef37b173f!2sFushimi%20Inari%20Taisha!5e0!3m2!1sen!2sjp!4v1616515748031!5m2!1sen!2sjp"></iframe>
+            </div>
+        </div>
+    </section>
 
-<div class="day-navigation">
-    <button onclick="alert('Go to April 18')">April 18</button>
-    <button onclick="alert('Go to April 19')">April 19</button>
-    <button onclick="alert('Go to April 20')">April 20</button>
-</div>
+    <script>
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            const isVisible = details.style.display === 'block';
+            details.style.display = isVisible ? 'none' : 'block';
+            button.textContent = isVisible ? 'Show Details' : 'Hide Details';
+        }
 
-<a href="mailto:your-email@example.com" class="cta-button">Contact Me for More Information</a>
-
-<footer>
-    <p>&copy; 2025 Japan Travel Itinerary | All Rights Reserved</p>
-</footer>
-
-<!-- Google Maps API script -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-
+        function scrollToDay(dayId) {
+            document.getElementById(dayId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
