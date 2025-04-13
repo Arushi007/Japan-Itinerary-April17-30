@@ -21,6 +21,18 @@
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
     }
+    details {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    summary {
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
     ul {
       list-style: none;
       padding-left: 0;
@@ -28,19 +40,21 @@
     li {
       margin-bottom: 15px;
       position: relative;
-      padding-left: 30px;
+      padding-left: 25px;
     }
     li::before {
       content: '🌸';
       position: absolute;
       left: 0;
     }
-    .day {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-bottom: 30px;
+    .flight::before {
+      content: '✈️';
+    }
+    .hotel::before {
+      content: '🏨';
+    }
+    .transport::before {
+      content: '🚅';
     }
     .button {
       display: inline-block;
@@ -51,23 +65,10 @@
       text-decoration: none;
       margin-top: 10px;
     }
-    .icon {
-      margin-right: 8px;
-    }
-    .flight::before {
-      content: '✈️';
-      position: absolute;
-      left: 0;
-    }
-    .hotel::before {
-      content: '🏨';
-      position: absolute;
-      left: 0;
-    }
-    .transport::before {
-      content: '🚄';
-      position: absolute;
-      left: 0;
+    img.map {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -75,89 +76,89 @@
 
 <h1>Japan Travel Itinerary</h1>
 
-<div class="day">
-  <h2>April 18 - Tokyo Arrival and Exploration</h2>
+<details open>
+  <summary>April 18 - Tokyo Highlights</summary>
   <ul>
-    <li class="flight">Arrival in Tokyo</li>
-    <li class="hotel">Check-in to hotel</li>
-    <li>Visit Meiji Shrine</li>
-    <li>Explore Yoyogi Park</li>
-    <li>Visit Imperial Palace</li>
-    <li>Evening at Ueno Park</li>
-    <li>Asakusa and Shibuya Crossing at night</li>
+    <li>Arrival in Tokyo</li>
+    <li>🛫 Flight Arrival & Check-in</li>
+    <li>Imperial Palace, Meiji Shrine, Yoyogi Park</li>
+    <li>Evening at Ueno Park, Asakusa, Shibuya Crossing</li>
+    <li class="hotel">Hotel Check-in</li>
   </ul>
-</div>
+  <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Tokyo_Map.png" alt="Tokyo Map">
+</details>
 
-<div class="day">
-  <h2>April 19 - Mt. Fuji & Sakura Ropeway</h2>
+<details>
+  <summary>April 19 - Mt. Fuji & Sakura Ropeway</summary>
   <ul>
-    <li>Travel to Mt. Fuji</li>
-    <li>Enjoy Sakura Ropeway</li>
+    <li>🚐 Mt. Fuji exploration</li>
+    <li>Sakura Ropeway</li>
+    <li>Wisteria viewing</li>
   </ul>
-</div>
+</details>
 
-<div class="day">
-  <h2>April 20 - Mt. Fuji & Hakone Day Tour</h2>
+<details>
+  <summary>April 20 - Mt. Fuji & Hakone</summary>
   <ul>
-    <li>Scenic day exploring Hakone</li>
+    <li>🚐 Full day trip to Hakone</li>
   </ul>
-</div>
+</details>
 
-<div class="day">
-  <h2>April 21 - Disneyland</h2>
+<details>
+  <summary>April 21 - Tokyo Disney Resort</summary>
   <ul>
-    <li>Full day at Tokyo Disneyland</li>
+    <li>🎢 Visit to Disneyland</li>
   </ul>
-</div>
+</details>
 
-<div class="day">
-  <h2>April 22 - Ashikaga Wisteria Festival</h2>
+<details>
+  <summary>April 22 - Wisteria Gardens</summary>
   <ul>
-    <li>Visit Ashikaga Flower Park to see wisteria</li>
+    <li>🌺 Wisteria viewing at Ashikaga Flower Park</li>
   </ul>
-</div>
+</details>
 
-<div class="day">
-  <h2>April 23 - ✈️ Flight to Hakodate & Local Exploration</h2>
+<details>
+  <summary>April 23 - Flight to Hakodate & Local Exploration</summary>
   <ul>
-    <li class="flight">Flight from Tokyo Haneda to Hakodate (7:15 AM - 8:35 AM)</li>
+    <li class="flight">Flight from Tokyo to Hakodate (7:15 AM - 8:35 AM)</li>
     <li class="hotel">Check-in at JR Inn Hakodate</li>
-    <li>Local sightseeing and food exploration</li>
+    <li>Local exploration in Hakodate</li>
   </ul>
-</div>
+</details>
 
-<div class="day">
-  <h2>April 24 - Hakodate Day Tour</h2>
+<details>
+  <summary>April 24 - Hokkaido Day Tour</summary>
   <ul>
-    <li>07:50 - Departure for sightseeing</li>
-    <li>08:15 - Cape Tachimachi (20 min, self-guided)</li>
-    <li>11:00 - Matsumaejō Castle Ruins (1 hr 10 min, ticket included)</li>
-    <li>13:20 - Kamome Island (1 hr 10 min, self-guided)</li>
-    <li>16:00 - Goryokaku Park (1 hr 10 min, self-guided)</li>
+    <li>🌅 Cape Tachimachi (07:50 Departure)</li>
+    <li>🏯 Matsumae Castle Ruins (11:00 AM)</li>
+    <li>🏝️ Seagull Island (13:20 PM)</li>
+    <li>🌸 Goryokaku Park (16:00 PM)</li>
   </ul>
-</div>
+  <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Hokkaido_map.png" alt="Hokkaido Map">
+</details>
 
-<div class="day">
-  <h2>April 25 - ✈️ Flight to Kyoto via Tokyo</h2>
+<details>
+  <summary>April 25 - Travel to Kyoto</summary>
   <ul>
-    <li class="flight">Flight from Hakodate to Tokyo Haneda (9:10 AM - 10:40 AM)</li>
-    <li class="transport">Bullet train from Haneda to Shinagawa</li>
-    <li class="transport">Shinagawa to Kyoto (12:07 PM - 12:15 PM)</li>
-    <li class="hotel">Check-in at Hotel Solare Nichiets</li>
-    <li>Local exploration and traditional tea and kimono ceremony</li>
+    <li class="flight">Flight from Hakodate to Haneda (9:10 - 10:40)</li>
+    <li class="transport">Bullet train: Haneda → Shinagawa → Kyoto (12:07 - 12:15)</li>
+    <li class="hotel">Check-in at Hotel Solero Nichetsu</li>
+    <li>🍵 Tea ceremony & Kimono experience</li>
+    <li>Local Kyoto exploration</li>
   </ul>
-</div>
+</details>
 
-<div class="day">
-  <h2>April 26 - Kyoto & Nara Day Tour</h2>
+<details>
+  <summary>April 26 - Kyoto & Nara Day Tour</summary>
   <ul>
-    <li>Visit Nara Park and interact with deer</li>
-    <li>Explore Todai-ji Temple with the Great Buddha</li>
-    <li>Lunch: Kobe Beef Shabu-Shabu or free time in Arashiyama</li>
-    <li>Wander through Arashiyama Bamboo Forest</li>
-    <li>Visit Kinkaku-ji Temple (Golden Pavilion)</li>
+    <li>🦌 Nara Park & Todai-ji Temple</li>
+    <li>🍽️ Lunch: Kobe Beef Shabu-Shabu / Free Time in Arashiyama</li>
+    <li>🎍 Bamboo Grove Walk in Arashiyama</li>
+    <li>🏯 Kinkaku-ji Temple (Golden Pavilion)</li>
   </ul>
-</div>
+  <img class="map" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Kyoto_map.png" alt="Kyoto Map">
+</details>
 
 </body>
 </html>
