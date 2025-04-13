@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Japan Travel Itinerary</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f5f7fa;
       color: #333;
       padding: 20px;
@@ -16,34 +15,11 @@
     h1 {
       text-align: center;
       color: #1f5ea8;
-      font-size: 36px;
-      margin-bottom: 30px;
     }
     h2 {
       color: #1f5ea8;
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
-    .itinerary-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .day {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-bottom: 30px;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-    .day:hover {
-      transform: scale(1.02);
-    }
-    .day h3 {
-      margin-top: 0;
-      color: #555;
     }
     ul {
       list-style: none;
@@ -52,40 +28,19 @@
     li {
       margin-bottom: 15px;
       position: relative;
-      padding-left: 30px;
+      padding-left: 25px;
     }
     li::before {
-      content: '📅';
+      content: '🌸';
       position: absolute;
       left: 0;
     }
-    .train::before {
-      content: '\1F686'; /* Train Emoji */
-      position: absolute;
-      left: 0;
-      color: #008C45;
-    }
-    .car::before {
-      content: '\1F697'; /* Car Emoji */
-      position: absolute;
-      left: 0;
-      color: #E91E63;
-    }
-    .flight::before {
-      content: '\2708'; /* Airplane Emoji */
-      position: absolute;
-      left: 0;
-      color: #FF9800;
-    }
-    .day-details {
-      display: none;
-      margin-top: 20px;
-    }
-    .map {
-      height: 300px;
-      margin-top: 20px;
-      border-radius: 10px;
-      background-color: #eaeaea;
+    .day {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
     }
     .button {
       display: inline-block;
@@ -96,8 +51,36 @@
       text-decoration: none;
       margin-top: 10px;
     }
-    .map-container {
-      margin-top: 20px;
+
+    /* Collapsible section styles */
+    .collapsible {
+      background-color: #1f5ea8;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: #0f3d7c;
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    /* Map styles */
+    #map {
+      height: 500px;
+      width: 100%;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -105,143 +88,156 @@
 
 <h1>Japan Travel Itinerary</h1>
 
-<div class="itinerary-container">
-  
-  <!-- April 17 - Flight from Delhi to Haneda Airport -->
-  <div class="day" onclick="toggleDetails('day-17')">
-    <h2>April 17 - Flight from Delhi to Haneda Airport</h2>
-    <div id="day-17" class="day-details">
-      <ul>
-        <li class="flight"><strong>10:00 AM:</strong> Depart from Indira Gandhi International Airport, Delhi</li>
-        <li class="flight"><strong>06:00 PM:</strong> Arrival at Haneda Airport, Tokyo</li>
-      </ul>
-      <div id="map-17" class="map"></div>
-    </div>
-  </div>
+<!-- Interactive Map -->
+<div id="map"></div>
 
-  <!-- April 18 - Tokyo Tour -->
-  <div class="day" onclick="toggleDetails('day-18')">
-    <h2>April 18 - Tokyo</h2>
-    <div id="day-18" class="day-details">
-      <ul>
-        <li class="car"><strong>08:00 AM:</strong> Arrival and check-in</li>
-        <li class="train"><strong>10:00 AM:</strong> Visit to Meiji Shrine</li>
-        <li class="train"><strong>12:00 PM:</strong> Visit to Senso-ji Temple, Asakusa</li>
-        <li class="train"><strong>02:00 PM:</strong> Explore Ueno Park</li>
-        <li class="car"><strong>04:00 PM:</strong> Visit Shibuya Crossing</li>
-        <li class="car"><strong>06:00 PM:</strong> Free time for dinner and exploration</li>
-      </ul>
-      <div id="map-18" class="map"></div>
-    </div>
+<!-- Days of the Itinerary -->
+<div class="day">
+  <h2>April 18 - Tokyo</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Arrival and check-in</li>
+      <li>Meiji Shrine</li>
+      <li>Yoyogi Park</li>
+      <li>Imperial Palace</li>
+      <li>Ueno Park (Evening)</li>
+      <li>Asakusa</li>
+      <li>Shibuya Crossing</li>
+    </ul>
   </div>
-
-  <!-- April 19 - Mount Fuji Tour -->
-  <div class="day" onclick="toggleDetails('day-19')">
-    <h2>April 19 - Mount Fuji</h2>
-    <div id="day-19" class="day-details">
-      <ul>
-        <li class="car"><strong>09:00 AM:</strong> Mount Fuji Viewpoint</li>
-        <li class="car"><strong>11:00 AM:</strong> Sakura Ropeway Experience</li>
-      </ul>
-      <div id="map-19" class="map"></div>
-    </div>
-  </div>
-
-  <!-- April 28 - Arrival at Osaka -->
-  <div class="day" onclick="toggleDetails('day-28')">
-    <h2>April 28 - Arrival at Osaka</h2>
-    <div id="day-28" class="day-details">
-      <ul>
-        <li class="train"><strong>06:55 AM:</strong> Train from Kyoto to Shin-Osaka</li>
-        <li class="train"><strong>07:09 AM:</strong> Arrival at Shin-Osaka</li>
-        <li class="car"><strong>08:00 AM:</strong> Check-in at W Osaka Hotel</li>
-        <li class="train"><strong>10:00 AM:</strong> Take train to Hiroshima</li>
-      </ul>
-      <div id="map-28" class="map"></div>
-    </div>
-  </div>
-
-  <!-- April 29 - Universal Studios and Osaka Castle Exploration -->
-  <div class="day" onclick="toggleDetails('day-29')">
-    <h2>April 29 - Universal Studios and Osaka Castle Exploration</h2>
-    <div id="day-29" class="day-details">
-      <ul>
-        <li class="car"><strong>08:00 AM:</strong> Explore Osaka Castle</li>
-        <li class="car"><strong>11:00 AM:</strong> Head to Universal Studios</li>
-        <li class="car"><strong>02:00 PM:</strong> Explore Dondobari Osaka Market</li>
-      </ul>
-      <div id="map-29" class="map"></div>
-    </div>
-  </div>
-
-  <!-- April 30 - Return from Osaka to Delhi -->
-  <div class="day" onclick="toggleDetails('day-30')">
-    <h2>April 30 - Return from Osaka to Delhi</h2>
-    <div id="day-30" class="day-details">
-      <ul>
-        <li class="car"><strong>08:00 AM:</strong> Check-out from W Osaka Hotel</li>
-        <li class="car"><strong>09:00 AM:</strong> Depart for Kansai International Airport (KIX)</li>
-        <li class="flight"><strong>11:00 AM:</strong> Arrive at Kansai International Airport</li>
-        <li class="flight"><strong>01:00 PM:</strong> Flight departure from Kansai Airport (KIX) to Hong Kong</li>
-        <li class="flight"><strong>03:00 PM:</strong> Arrival in Hong Kong (HKG) - 2-hour layover</li>
-        <li class="flight"><strong>05:00 PM:</strong> Depart Hong Kong (HKG) for Delhi</li>
-      </ul>
-      <div id="map-30" class="map"></div>
-    </div>
-  </div>
-
 </div>
 
-<!-- Map Scripts -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<div class="day">
+  <h2>April 19 - Mount Fuji</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Mount Fuji Viewpoint</li>
+      <li>Sakura Ropeway Experience</li>
+    </ul>
+  </div>
+</div>
+
+<div class="day">
+  <h2>April 20 - Hakone</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Full-day exploration around Mt. Fuji and Hakone</li>
+    </ul>
+  </div>
+</div>
+
+<div class="day">
+  <h2>April 21 - DisneyLand + Wisteria</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Visit to Tokyo Disneyland</li>
+      <li>Evening trip to Wisteria Park</li>
+    </ul>
+  </div>
+</div>
+
+<div class="day">
+  <h2>April 22 - Wisteria</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Wisteria flower viewing experience</li>
+    </ul>
+  </div>
+</div>
+
+<div class="day">
+  <h2>April 23 - Hakodate</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Flight from Tokyo Haneda to Hakodate: 7:15 AM – 8:35 AM</li>
+      <li>Check-in at JR Inn Hakodate</li>
+      <li>Local exploration in Hakodate</li>
+    </ul>
+  </div>
+</div>
+
+<!-- More days... -->
+
+<!-- April 28 - Osaka Arrival -->
+<div class="day">
+  <h2>April 28 - Osaka</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Arrival at Osaka</li>
+      <li>Kyoto to Shin Osaka Train: 6:55 AM - 7:09 AM</li>
+      <li>Check-in to W Osaka Hotel</li>
+      <li>Train from Shin Osaka to Hiroshima</li>
+      <li>Pick-up from Hiroshima Station</li>
+    </ul>
+  </div>
+</div>
+
+<!-- April 29 - Osaka and Universal Studios -->
+<div class="day">
+  <h2>April 29 - Osaka</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Explore Osaka Castle</li>
+      <li>Head to Universal Studios</li>
+      <li>Explore Dotonbori Osaka Market</li>
+    </ul>
+  </div>
+</div>
+
+<!-- April 30 - Return -->
+<div class="day">
+  <h2>April 30 - Return</h2>
+  <button class="collapsible">Show Details</button>
+  <div class="content">
+    <ul>
+      <li>Departure from Kansai Airport to HKG</li>
+      <li>2 hours layover at Hong Kong</li>
+      <li>Flight from Hong Kong to Delhi</li>
+    </ul>
+  </div>
+</div>
+
 <script>
-  function initMap() {
-    // Map initialization for April 17 - Delhi to Haneda
-    var map17 = new google.maps.Map(document.getElementById('map-17'), {
-      center: { lat: 35.5494, lng: 139.7798 },
-      zoom: 10
-    });
+// Google Map Initialization
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: { lat: 35.6762, lng: 139.6503 } // Tokyo's lat and lng
+  });
 
-    // Map initialization for April 18 - Tokyo
-    var map18 = new google.maps.Map(document.getElementById('map-18'), {
-      center: { lat: 35.6762, lng: 139.6503 },
-      zoom: 12
-    });
+  // Example markers (add more locations as needed)
+  new google.maps.Marker({
+    position: { lat: 35.6812, lng: 139.7671 }, // Tokyo Station
+    map: map,
+    title: 'Tokyo Station'
+  });
+}
 
-    // Map initialization for April 19 - Mount Fuji
-    var map19 = new google.maps.Map(document.getElementById('map-19'), {
-      center: { lat: 35.3606, lng: 138.7274 },
-      zoom: 12
-    });
-
-    // Map initialization for April 28 - Osaka
-    var map28 = new google.maps.Map(document.getElementById('map-28'), {
-      center: { lat: 34.7025, lng: 135.4959 },
-      zoom: 12
-    });
-
-    // Map initialization for April 29 - Universal Studios and Osaka Castle
-    var map29 = new google.maps.Map(document.getElementById('map-29'), {
-      center: { lat: 34.6688, lng: 135.4387 },
-      zoom: 12
-    });
-
-    // Map initialization for April 30 - Return from Osaka to Delhi
-    var map30 = new google.maps.Map(document.getElementById('map-30'), {
-      center: { lat: 34.8194, lng: 135.6201 },
-      zoom: 12
-    });
-  }
-
-  function toggleDetails(dayId) {
-    var details = document.getElementById(dayId);
-    if (details.style.display === "block") {
-      details.style.display = "none";
+// Collapsible Functionality
+var coll = document.getElementsByClassName("collapsible");
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
     } else {
-      details.style.display = "block";
+      content.style.display = "block";
     }
-  }
+  });
+}
 </script>
+
+<!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFQGA9ZAHmIwSNkHq9TD1VTTijhdwClfo&callback=initMap" async defer></script>
 
 </body>
 </html>
