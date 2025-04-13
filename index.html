@@ -29,7 +29,7 @@
       margin: 20px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
     }
     .card {
       background-color: #fff;
@@ -68,77 +68,97 @@
       color: #ff8ba7;
       font-weight: bold;
     }
-    .hotel img {
-      border-radius: 15px;
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
     }
-    .hotel {
-      background-color: #f1f1f1;
-      padding: 15px;
-      margin-top: 10px;
-      border-radius: 10px;
+    ul li {
+      font-size: 1.1rem;
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
     }
-    .hotel h4 {
-      color: #333;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
+    ul li .icon {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      color: #ff8ba7;
     }
   </style>
 </head>
 <body>
-  <header>🇯🇵 Tokyo Exploration | April 18, 2025</header>
+  <header>🇯🇵 Tokyo & Mt. Fuji Exploration | April 19, 2025</header>
 
   <section class="timeline">
-    <!-- Arrival -->
+    <!-- Departure and Flight -->
     <div class="card">
-      <h3><i class="fas fa-plane icon"></i> Arrival in Tokyo</h3>
-      <p><strong>Check-in at Hotel:</strong> 9:00 AM</p>
-      <div class="hotel">
-        <h4>Hotel: Shibuya Excel Hotel Tokyu</h4>
-        <img src="https://cdn.pixabay.com/photo/2018/12/23/10/44/hotel-3880175_1280.jpg" alt="Hotel" class="place">
-      </div>
+      <h3><i class="fas fa-plane icon"></i> 07:15 Departure</h3>
+      <ul>
+        <li><i class="fas fa-arrow-right icon"></i> Departure from Tokyo to Yamanashi</li>
+      </ul>
     </div>
 
-    <!-- Meiji Shrine & Yoyogi Park -->
+    <!-- Yamanashi Fruit Picking -->
     <div class="card">
-      <h3><i class="fas fa-map-marker-alt icon"></i> Meiji Shrine & Yoyogi Park</h3>
-      <p>Explore the tranquil <span class="highlight">Meiji Shrine</span> and enjoy a relaxing walk in the lush <span class="highlight">Yoyogi Park</span>.</p>
-      <img src="https://cdn.pixabay.com/photo/2018/05/29/19/43/meiji-shrine-3449163_1280.jpg" alt="Meiji Shrine" class="place">
+      <h3><i class="fas fa-apple-alt icon"></i> 09:00 Yamanashi Fruit Picking</h3>
+      <ul>
+        <li><i class="fas fa-clock icon"></i> 30 minutes</li>
+        <li><i class="fas fa-lemon icon"></i> Enjoy all-you-can-eat seasonal fruits</li>
+        <li><i class="fas fa-calendar-alt icon"></i> (Late Nov - early Dec: Pre-picked fruits)</li>
+      </ul>
     </div>
 
-    <!-- Asakusa & Takeshita Street -->
+    <!-- Flower Viewing -->
     <div class="card">
-      <h3><i class="fas fa-map-marker-alt icon"></i> Asakusa & Takeshita Street</h3>
-      <p>Visit the famous <span class="highlight">Asakusa Temple</span> and wander through the vibrant <span class="highlight">Takeshita Street</span>.</p>
-      <img src="https://cdn.pixabay.com/photo/2017/11/19/13/56/temple-2951614_1280.jpg" alt="Asakusa Temple" class="place">
+      <h3><i class="fas fa-flower icon"></i> 10:30 Flower Viewing</h3>
+      <ul>
+        <li><i class="fas fa-clock icon"></i> 1 hour</li>
+        <li><i class="fas fa-map-marker-alt icon"></i> Explore: 
+          <ul>
+            <li><span class="highlight">Lake Motosuko</span></li>
+            <li><span class="highlight">Oishi Park</span></li>
+            <li><span class="highlight">Lake Kawaguchi</span></li>
+            <li><span class="highlight">Yamanakako Hananomiyako Park</span></li>
+            <li><span class="highlight">Kawaguchiko Garden or Kawaguchiko Northern Bank Park</span></li>
+          </ul>
+        </li>
+      </ul>
     </div>
 
-    <!-- Imperial Palace -->
+    <!-- Mt. Fuji Special Lunch Box -->
     <div class="card">
-      <h3><i class="fas fa-building icon"></i> Imperial Palace</h3>
-      <p>Discover the beautiful grounds of the <span class="highlight">Imperial Palace</span> and the serene East Gardens.</p>
-      <img src="https://cdn.pixabay.com/photo/2015/12/14/01/57/imperial-palace-1098706_1280.jpg" alt="Imperial Palace" class="place">
+      <h3><i class="fas fa-utensils icon"></i> 12:00 Mt. Fuji Special Lunch</h3>
+      <ul>
+        <li><i class="fas fa-clock icon"></i> 40 minutes</li>
+        <li><i class="fas fa-pizza-slice icon"></i> Enjoy Mt. Fuji special lunch at Fuji 5th Station</li>
+        <li><i class="fas fa-exclamation-triangle icon"></i> If the road to Fuji 5th Station is closed, alternative plan: Arakurayama Sengen Park or Mt. Fuji 4th Station</li>
+      </ul>
     </div>
 
-    <!-- Tokyo Skytree -->
+    <!-- Kachi-Kachi Ropeway -->
     <div class="card">
-      <h3><i class="fas fa-skyatlas icon"></i> Tokyo Skytree</h3>
-      <p>Marvel at breathtaking city views from the <span class="highlight">Tokyo Skytree</span>, one of the tallest structures in the world.</p>
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/18/06/tokyo-1281600_1280.jpg" alt="Tokyo Skytree" class="place">
+      <h3><i class="fas fa-cable-car icon"></i> 14:00 Kachi-Kachi Ropeway</h3>
+      <ul>
+        <li><i class="fas fa-clock icon"></i> 40 minutes</li>
+        <li><i class="fas fa-exclamation-triangle icon"></i> Cable car maintenance: December 10th-20th (alternative: Mount Fuji Special Observation Deck)</li>
+      </ul>
     </div>
 
-    <!-- Shibuya Crossing -->
+    <!-- Oshino Hakkai or Lawson Town Hall -->
     <div class="card">
-      <h3><i class="fas fa-crosshairs icon"></i> Shibuya Crossing</h3>
-      <p>Feel the energy at the world-renowned <span class="highlight">Shibuya Crossing</span>, the busiest pedestrian crossing in the world.</p>
-      <img src="https://cdn.pixabay.com/photo/2017/06/08/00/48/shibuya-2384627_1280.jpg" alt="Shibuya Crossing" class="place">
+      <h3><i class="fas fa-snowflake icon"></i> 15:30 Oshino Hakkai</h3>
+      <ul>
+        <li><i class="fas fa-clock icon"></i> 40 minutes at Oshino Hakkai or 20 minutes at Lawson Fujikawaguchiko Town Hall</li>
+        <li><i class="fas fa-calendar-alt icon"></i> April to November weekends & holidays may skip Oshino Hakkai due to traffic</li>
+      </ul>
     </div>
 
-    <!-- Dinner -->
+    <!-- Return -->
     <div class="card">
-      <h3><i class="fas fa-utensils icon"></i> Dinner in Tokyo</h3>
-      <p>Finish your day with a delightful dinner at one of Tokyo's iconic restaurants.</p>
+      <h3><i class="fas fa-arrow-left icon"></i> 18:30 Return</h3>
+      <ul>
+        <li><i class="fas fa-clock icon"></i> Return to Tokyo</li>
+      </ul>
     </div>
   </section>
-
 </body>
 </html>
