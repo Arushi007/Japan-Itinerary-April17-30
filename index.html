@@ -1,157 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Japan Travel Itinerary</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-      padding: 20px;
-      line-height: 1.6;
+// Define the itinerary data with details about each location and their significance
+const itineraryData = [
+    {
+        date: "April 17",
+        title: "Flight from Delhi to Haneda Airport",
+        details: [
+            { time: "10:00 AM", event: "Depart from Indira Gandhi International Airport, Delhi" },
+            { time: "06:00 PM", event: "Arrival at Haneda Airport, Tokyo" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Haneda%20Airport&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 18",
+        title: "Tokyo",
+        details: [
+            { time: "08:00 AM", event: "Arrival and check-in" },
+            { time: "10:00 AM", event: "Visit to Meiji Shrine - A historical Shinto shrine dedicated to Emperor Meiji" },
+            { time: "12:00 PM", event: "Visit to Senso-ji Temple, Asakusa - Tokyo's oldest and most famous temple" },
+            { time: "02:00 PM", event: "Explore Ueno Park - Famous for cherry blossoms and museums" },
+            { time: "04:00 PM", event: "Visit Shibuya Crossing - Iconic pedestrian crossing in Tokyo" },
+            { time: "06:00 PM", event: "Free time for dinner and exploration" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Meiji%20Shrine&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 19",
+        title: "Mount Fuji",
+        details: [
+            { time: "09:00 AM", event: "Mount Fuji Viewpoint - Scenic view of Japan's iconic mountain" },
+            { time: "11:00 AM", event: "Sakura Ropeway Experience - Ride the ropeway for breathtaking views" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Mount%20Fuji&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 20",
+        title: "Hakone",
+        details: [
+            { time: "08:00 AM", event: "Full-day exploration around Mt. Fuji and Hakone - Famous for hot springs and views of Mt. Fuji" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Hakone&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 21",
+        title: "DisneyLand + Wisteria",
+        details: [
+            { time: "09:00 AM", event: "Visit to Tokyo Disneyland - Enjoy themed rides and attractions" },
+            { time: "05:00 PM", event: "Evening trip to Wisteria Park - A scenic park known for its beautiful Wisteria flowers" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Tokyo%20Disneyland&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 22",
+        title: "Wisteria",
+        details: [
+            { time: "09:00 AM", event: "Wisteria flower viewing experience - Experience the beauty of the Wisteria flowers" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Wisteria%20Park&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 23",
+        title: "Hakodate",
+        details: [
+            { time: "07:15 AM", event: "Flight from Tokyo Haneda to Hakodate" },
+            { time: "08:35 AM", event: "Check-in at JR Inn Hakodate" },
+            { time: "10:00 AM", event: "Local exploration in Hakodate" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Hakodate&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 24",
+        title: "Hakodate Cherry Blossom Tour",
+        details: [
+            { time: "07:50 AM", event: "Departure" },
+            { time: "08:15 AM", event: "Cape Tachimachi - Panoramic sea cliff view" },
+            { time: "11:00 AM", event: "Matsumae Castle - Historical Edo-era site" },
+            { time: "01:20 PM", event: "Kamome (Seagull) Island - Scenic walking trails" },
+            { time: "04:00 PM", event: "Goryokaku Park - Star-shaped fortress and cherry blossoms" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Goryokaku%20Park&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 25",
+        title: "Travel to Kyoto",
+        details: [
+            { time: "09:10 AM", event: "Flight from Hakodate to Tokyo Haneda" },
+            { time: "10:40 AM", event: "Arrival in Tokyo" },
+            { time: "12:07 PM", event: "Bullet train from Tokyo Haneda to Shinagawa" },
+            { time: "02:00 PM", event: "Check-in at Hotel Solare Nichietsu" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Kyoto&key=YOUR_API_KEY"
+    },
+    {
+        date: "April 30",
+        title: "Return from Osaka to Delhi",
+        details: [
+            { time: "08:00 AM", event: "Check-out from W Osaka Hotel" },
+            { time: "09:00 AM", event: "Depart for Kansai International Airport (KIX)" },
+            { time: "11:00 AM", event: "Arrive at Kansai International Airport" },
+            { time: "01:00 PM", event: "Flight departure from Kansai Airport (KIX) to Hong Kong" }
+        ],
+        mapLink: "https://www.google.com/maps/embed/v1/place?q=Kansai%20International%20Airport&key=YOUR_API_KEY"
     }
-    h1 {
-      text-align: center;
-      color: #1f5ea8;
-    }
-    h2 {
-      color: #1f5ea8;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 15px;
-      position: relative;
-      padding-left: 25px;
-    }
-    li::before {
-      content: '🌸';
-      position: absolute;
-      left: 0;
-    }
-    .day {
-      background-color: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-bottom: 30px;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 15px;
-      background-color: #1f5ea8;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
+];
 
-    /* Collapsible section styles */
-    .collapsible {
-      background-color: #1f5ea8;
-      color: white;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      font-size: 15px;
-    }
+// Populate the itinerary dynamically using JavaScript
+const itineraryContainer = document.getElementById('itinerary');
 
-    .active, .collapsible:hover {
-      background-color: #0f3d7c;
-    }
+itineraryData.forEach(item => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('itinerary-item');
 
-    .content {
-      padding: 0 18px;
-      display: none;
-      overflow: hidden;
-      background-color: #f1f1f1;
-    }
+    const title = document.createElement('h2');
+    title.innerHTML = item.date + " - " + item.title;
+    itemDiv.appendChild(title);
 
-    /* Map styles */
-    #map {
-      height: 500px;
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body>
-
-<h1>Japan Travel Itinerary</h1>
-
-<!-- Interactive Map -->
-<div id="map"></div>
-
-<!-- Days of the Itinerary -->
-<div class="day">
-  <h2>April 18 - Tokyo</h2>
-  <button class="collapsible">Show Details</button>
-  <div class="content">
-    <ul>
-      <li><strong>Arrival and check-in</strong> – Arrive at Narita or Haneda Airport and head to your hotel for check-in.</li>
-      <li><strong>Meiji Shrine</strong> – Visit one of Tokyo's most important Shinto shrines. Take a peaceful walk through the beautiful forested area, just steps away from Harajuku. It's open from 5:00 AM - 5:00 PM, and entry is free. (Duration: 1 hour)</li>
-      <li><strong>Yoyogi Park</strong> – Located next to Meiji Shrine, this park is perfect for a relaxing stroll. The park opens at 5:00 AM, and it's an excellent spot to unwind. (Duration: 30 minutes)</li>
-      <li><strong>Imperial Palace</strong> – Explore the serene East Gardens of the Imperial Palace. The gardens are open from 9:00 AM - 5:00 PM, and they offer a peaceful retreat in the heart of the city. (Duration: 1 hour)</li>
-      <li><strong>Ueno Park (Evening)</strong> – Stroll around Ueno Park and visit the Ueno Zoo or museums if time permits. (Duration: 1 hour)</li>
-      <li><strong>Asakusa</strong> – Visit Senso-ji, Tokyo's oldest temple. Explore the nearby Nakamise-dori for traditional snacks and souvenirs. (Duration: 1.5 hours)</li>
-      <li><strong>Shibuya Crossing</strong> – Experience the world-famous Shibuya Crossing, one of the busiest pedestrian crossings in the world. Ideal for a photo op and to soak in the vibrant atmosphere. (Duration: 30 minutes)</li>
-    </ul>
-  </div>
-</div>
-
-<!-- More days... -->
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFQGA9ZAHmIwSNkHq9TD1VTTijhdwClfo&callback=initMap" async defer></script>
-<script>
-  var map;
-
-  function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 35.6762, lng: 139.6503}, // Set initial center to Tokyo
-      zoom: 10,
+    const detailsList = document.createElement('ul');
+    item.details.forEach(detail => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${detail.time}</strong>: ${detail.event}`;
+        detailsList.appendChild(listItem);
     });
+    itemDiv.appendChild(detailsList);
 
-    var locations = [
-      {lat: 35.6762, lng: 139.6503, title: 'Tokyo'}, // Tokyo
-      {lat: 35.6850, lng: 139.7528, title: 'Shibuya Crossing'}, // Shibuya
-      {lat: 35.7148, lng: 139.7967, title: 'Meiji Shrine'}, // Meiji Shrine
-      {lat: 35.3580, lng: 138.7274, title: 'Mount Fuji'}, // Mount Fuji
-      {lat: 34.6995, lng: 135.4941, title: 'Osaka Castle'} // Osaka Castle
-    ];
-
-    locations.forEach(function(location) {
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: location.title,
-      });
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function() {
-    var coll = document.getElementsByClassName("collapsible");
-    for (var i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-  });
-</script>
-
-</body>
-</html>
+    const mapContainer = document
