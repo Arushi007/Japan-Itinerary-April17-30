@@ -11,21 +11,24 @@
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f7fc;
+      background-color: #f7f7f7;
+      color: #333333;  /* Darker color for text */
     }
     header {
-      background: #ff8ba7;
+      background: #ff69b4;
       color: white;
       padding: 20px;
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
     .itinerary-container {
       display: flex;
       justify-content: space-between;
       padding: 20px;
+      flex-wrap: wrap;
     }
     .itinerary-list {
       flex: 1;
@@ -33,13 +36,13 @@
     }
     .map-container {
       flex: 1;
-      height: 500px;
+      height: 400px;
     }
     .card {
       background-color: white;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 15px;
       margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
@@ -48,34 +51,35 @@
     }
     .card h3 {
       margin: 0;
-      color: #f94c66;
-      font-size: 1.8rem;
+      color: #e91e63;
+      font-size: 1.6rem;
     }
     ul {
-      list-style: none;
-      padding-left: 20px;
-    }
-    ul li {
-      margin: 15px 0;
+      list-style-type: disc;
+      padding-left: 30px;
       font-size: 1.1rem;
     }
+    ul li {
+      margin: 12px 0;
+      line-height: 1.5;
+    }
     ul li i {
-      color: #f94c66;
+      color: #ff69b4;
       margin-right: 10px;
     }
     .btn {
-      background-color: #f94c66;
+      background-color: #ff69b4;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 20px;
       text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.2rem;
+      border-radius: 8px;
+      font-size: 1rem;
       transition: background-color 0.3s ease;
       display: inline-block;
       margin-top: 10px;
     }
     .btn:hover {
-      background-color: #d44154;
+      background-color: #e91e63;
     }
     .map-btn {
       display: flex;
@@ -83,27 +87,23 @@
       margin-top: 20px;
     }
     .map-btn button {
-      background-color: #ff8ba7;
+      background-color: #ff69b4;
       color: white;
-      padding: 15px 30px;
+      padding: 12px 25px;
       border-radius: 8px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       border: none;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     .map-btn button:hover {
-      background-color: #ff6699;
+      background-color: #e91e63;
     }
     .img-responsive {
       width: 100%;
       height: auto;
       border-radius: 8px;
       margin-bottom: 15px;
-    }
-    .itinerary-list ul li {
-      display: flex;
-      align-items: center;
     }
   </style>
 </head>
@@ -117,7 +117,7 @@
       <!-- April 18, 2025 Card -->
       <div class="card">
         <h3><i class="fas fa-plane"></i> April 18, 2025 - Arrival in Tokyo</h3>
-        <img src="https://via.placeholder.com/800x400/ff8ba7/ffffff?text=Tokyo+Arrival" alt="Tokyo Arrival" class="img-responsive">
+        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Tokyo+Arrival" alt="Tokyo Arrival" class="img-responsive">
         <ul>
           <li><i class="fas fa-clock"></i> 10:00 AM - Arrive at Tokyo International Airport</li>
           <li><i class="fas fa-hotel"></i> Transfer to Hotel for Check-in</li>
@@ -125,13 +125,13 @@
           <li><i class="fas fa-shopping-bag"></i> Afternoon Shopping at Ginza</li>
           <li><i class="fas fa-clock"></i> 6:00 PM - Dinner at Tokyo Tower</li>
         </ul>
-        <a href="#map" class="btn">See Map</a>
+        <button class="btn" onclick="window.location.href='#map'">See Map</button>
       </div>
 
       <!-- April 19, 2025 Card -->
       <div class="card">
         <h3><i class="fas fa-building"></i> April 19, 2025 - Exploring Tokyo</h3>
-        <img src="https://via.placeholder.com/800x400/ff8ba7/ffffff?text=Tokyo+Sightseeing" alt="Tokyo Sightseeing" class="img-responsive">
+        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Tokyo+Sightseeing" alt="Tokyo Sightseeing" class="img-responsive">
         <ul>
           <li><i class="fas fa-clock"></i> 9:00 AM - Visit the Meiji Shrine</li>
           <li><i class="fas fa-temple"></i> Explore Asakusa Temple</li>
@@ -139,13 +139,13 @@
           <li><i class="fas fa-museum"></i> Afternoon visit to Tokyo National Museum</li>
           <li><i class="fas fa-theater-masks"></i> 7:00 PM - Enjoy Dinner at Robot Restaurant</li>
         </ul>
-        <a href="#map" class="btn">See Map</a>
+        <button class="btn" onclick="window.location.href='#map'">See Map</button>
       </div>
 
       <!-- April 20, 2025 Card -->
       <div class="card">
         <h3><i class="fas fa-star"></i> April 20, 2025 - Hakone & Mt. Fuji Day Tour</h3>
-        <img src="https://via.placeholder.com/800x400/ff8ba7/ffffff?text=Hakone+Tour" alt="Hakone Tour" class="img-responsive">
+        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Hakone+Tour" alt="Hakone Tour" class="img-responsive">
         <ul>
           <li><i class="fas fa-clock"></i> 8:00 AM - Departure for Hakone</li>
           <li><i class="fas fa-umbrella-beach"></i> 10:30 AM - Visit Hakone Shrine & Lake Ashi</li>
@@ -155,13 +155,13 @@
           <li><i class="fas fa-lake"></i> 3:00 PM - Visit Lake Yamanaka</li>
           <li><i class="fas fa-fish"></i> 3:40 PM - Visit Oshino Hakkai Village</li>
         </ul>
-        <a href="#map" class="btn">See Map</a>
+        <button class="btn" onclick="window.location.href='#map'">See Map</button>
       </div>
 
       <!-- April 21, 2025 Card -->
       <div class="card">
         <h3><i class="fas fa-magic"></i> April 21, 2025 - Tokyo Disney Resort</h3>
-        <img src="https://via.placeholder.com/800x400/ff8ba7/ffffff?text=Tokyo+Disneyland" alt="Tokyo Disneyland" class="img-responsive">
+        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Tokyo+Disneyland" alt="Tokyo Disneyland" class="img-responsive">
         <ul>
           <li><i class="fas fa-clock"></i> 09:00 AM - Departure for Tokyo Disney Resort</li>
           <li><i class="fas fa-ticket-alt"></i> Arrival at Tokyo Disneyland</li>
@@ -174,19 +174,19 @@
           <li><i class="fas fa-fire"></i> Nighttime Fireworks Show</li>
           <li><i class="fas fa-clock"></i> 9:00 PM - Return to hotel</li>
         </ul>
-        <a href="#map" class="btn">See Map</a>
+        <button class="btn" onclick="window.location.href='#map'">See Map</button>
       </div>
 
       <!-- Cruise Dinner Card -->
       <div class="card">
         <h3><i class="fas fa-ship"></i> Tokyo Cruise Dinner</h3>
-        <img src="https://via.placeholder.com/800x400/ff8ba7/ffffff?text=Cruise+Dinner" alt="Cruise Dinner" class="img-responsive">
+        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Cruise+Dinner" alt="Cruise Dinner" class="img-responsive">
         <ul>
           <li><i class="fas fa-clock"></i> 7:00 PM - Departure for Cruise Dinner</li>
           <li><i class="fas fa-ship"></i> Enjoy a 2-hour luxurious cruise around Tokyo Bay</li>
           <li><i class="fas fa-utensils"></i> Gourmet 5-course dinner with views of the skyline</li>
         </ul>
-        <a href="#map" class="btn">See Map</a>
+        <button class="btn" onclick="window.location.href='#map'">See Map</button>
       </div>
     </div>
 
