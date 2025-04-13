@@ -25,14 +25,7 @@
       letter-spacing: 1px;
     }
     .itinerary-container {
-      display: flex;
-      justify-content: space-between;
       padding: 20px;
-      flex-wrap: wrap;
-    }
-    .itinerary-list {
-      flex: 1;
-      margin-right: 20px;
     }
     .card {
       background-color: white;
@@ -40,150 +33,40 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       padding: 15px;
       margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.05);
     }
     .card h3 {
-      margin: 0;
+      margin-top: 0;
       color: #e91e63;
-      font-size: 1.6rem;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 30px;
-      font-size: 1.1rem;
-    }
-    ul li {
-      margin: 12px 0;
-      line-height: 1.5;
-    }
-    ul li i {
-      color: #ff69b4;
-      margin-right: 10px;
-    }
-    .btn {
-      background-color: #ff69b4;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background-color: #e91e63;
-    }
-    .img-responsive {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 15px;
     }
   </style>
 </head>
 <body>
-
-  <header>Japan Travel Itinerary: April 18-25, 2025</header>
-
+  <header>Japan Itinerary: April 18 - 25, 2025</header>
   <div class="itinerary-container">
-    <div class="itinerary-list">
-      <!-- April 18, 2025 - Meiji Shrine, Yoyogi Park, Imperial Palace, Ueno Park, Asakusa, Shibuya Crossing -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 18, 2025 - Tokyo Exploration</h3>
-        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Meiji+Shrine+and+Yoyogi+Park" alt="Meiji Shrine and Yoyogi Park" class="img-responsive">
-        <ul>
-          <li><i class="fas fa-clock"></i> 9:00 AM - Meiji Shrine and Yoyogi Park</li>
-          <li><i class="fas fa-clock"></i> 11:00 AM - Imperial Palace</li>
-          <li><i class="fas fa-clock"></i> 2:00 PM - Ueno Park</li>
-          <li><i class="fas fa-clock"></i> 5:00 PM - Asakusa (Senso-ji Temple)</li>
-          <li><i class="fas fa-clock"></i> 7:00 PM - Shibuya Crossing</li>
-        </ul>
-        <button class="btn" onclick="window.location.href='#map'">See Map</button>
-      </div>
 
-      <!-- April 19, 2025 - Mt. Fuji and Sakura, Hakone Ropeway -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 19, 2025 - Mt. Fuji, Sakura & Hakone Ropeway</h3>
-        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Mt.+Fuji+and+Sakura" alt="Mt. Fuji and Sakura" class="img-responsive">
-        <ul>
-          <li><i class="fas fa-clock"></i> 8:00 AM - Departure for Mt. Fuji</li>
-          <li><i class="fas fa-clock"></i> 10:00 AM - Arrive at Mt. Fuji</li>
-          <li><i class="fas fa-clock"></i> 12:00 PM - Hakone Ropeway and Owakudani</li>
-        </ul>
-        <button class="btn" onclick="window.location.href='#map'">See Map</button>
-      </div>
+    <div class="card">
+      <h3>April 24 - Hakodate Cherry Blossom Day Tour</h3>
+      <ul>
+        <li>07:50 - Departure</li>
+        <li>08:15 - Cape Tachimachi (20 mins, Self-guided)</li>
+        <li>11:00 - Matsumaejō Castle Ruins (1 hr 10 mins, includes castle ticket)</li>
+        <li>13:20 - Kamome Island (1 hr 10 mins, Self-guided)</li>
+        <li>16:00 - Goryokaku Park (1 hr, Self-guided, Tower ticket not included)</li>
+      </ul>
+    </div>
 
-      <!-- April 20, 2025 - Mt. Fuji and Hakone Exploration -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 20, 2025 - Mt. Fuji & Hakone</h3>
-        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Hakone+Pirate+Ship" alt="Hakone Pirate Ship" class="img-responsive">
-        <ul>
-          <li><i class="fas fa-clock"></i> 8:00 AM - Departure for Hakone</li>
-          <li><i class="fas fa-clock"></i> 10:00 AM - Hakone Shrine and Lake Ashi</li>
-          <li><i class="fas fa-clock"></i> 12:00 PM - Hakone Pirate Ship</li>
-          <li><i class="fas fa-clock"></i> 2:00 PM - Hakone Ropeway and Owakudani</li>
-        </ul>
-        <button class="btn" onclick="window.location.href='#map'">See Map</button>
-      </div>
+    <div class="card">
+      <h3>April 25 - Hakodate to Kyoto</h3>
+      <ul>
+        <li>09:10 - Flight from Hakodate Airport to Tokyo Haneda (Arrival: 10:40)</li>
+        <li>Transfer from Tokyo Haneda Airport to Shinagawa Station</li>
+        <li>12:07 - Bullet train from Shinagawa to Kyoto (Arrival: 12:15)</li>
+        <li>Check-in to Hotel Solera Nichietsu</li>
+        <li>Local Kyoto exploration</li>
+        <li>Tea and Kimono Ceremony</li>
+      </ul>
+    </div>
 
-      <!-- April 21, 2025 - Tokyo Disneyland and DisneySea -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 21, 2025 - Tokyo Disneyland & DisneySea</h3>
-        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Tokyo+Disneyland" alt="Tokyo Disneyland" class="img-responsive">
-        <ul>
-          <li><i class="fas fa-clock"></i> 9:00 AM - Departure for Tokyo Disneyland</li>
-          <li><i class="fas fa-clock"></i> 9:30 AM - Tokyo Disneyland 1-Day Passport</li>
-          <li><i class="fas fa-clock"></i> 1:00 PM - Enjoy Tokyo DisneySea</li>
-        </ul>
-        <button class="btn" onclick="window.location.href='#map'">See Map</button>
-      </div>
-
-      <!-- April 22, 2025 - Wisteria Story at Ashikaga Flower Park -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 22, 2025 - Wisteria Story at Ashikaga Flower Park</h3>
-        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Wisteria+Story" alt="Wisteria Story at Ashikaga Flower Park" class="img-responsive">
-        <ul>
-          <li><i class="fas fa-clock"></i> 10:00 AM - Departure for Ashikaga Flower Park</li>
-          <li><i class="fas fa-clock"></i> 12:00 PM - Visit Ashikaga Flower Park</li>
-          <li><i class="fas fa-clock"></i> 8:00 PM - Return</li>
-        </ul>
-        <button class="btn" onclick="window.location.href='#map'">See Map</button>
-      </div>
-
-      <!-- April 23, 2025 - Travel from Tokyo to Hakodate & Local Exploration -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 23, 2025 - Travel from Tokyo to Hakodate & Local Exploration</h3>
-        <img src="https://via.placeholder.com/800x400/ff69b4/ffffff?text=Travel+to+Hakodate" alt="Travel to Hakodate" class="img-responsive">
-        <ul>
-          <li><i class="fas fa-clock"></i> 5:00 AM - Depart from Tokyo Airport (Flight: 71)</li>
-          <li><i class="fas fa-clock"></i> 8:35 AM - Arrive at Hakodate Airport</li>
-          <!-- April 24, 2025 - Hokkaido Hakodate Matsumae Castle + Goryokaku + Seagull Island Cherry Blossom Viewing Tour -->
-        </ul>
-        <button class="btn" onclick="window.location.href='#map'">See Map</button>
-      </div>
-
-      <!-- April 24, 2025 - Hokkaido Hakodate Matsumae Castle + Goryokaku + Seagull Island Cherry Blossom Viewing Day Tour -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 24, 2025 - Hokkaido Hakodate Cherry Blossom Tour</h3>
-        <ul>
-          <li><i class="fas fa-clock"></i> 07:50 AM - Departure</li>
-          <li><i class="fas fa-clock"></i> 08:15 AM - Cape Tachimachi (Self-guided)</li>
-          <li><i class="fas fa-clock"></i> 11:00 AM - Matsumae Castle Ruins (Self-guided, includes ticket)</li>
-          <li><i class="fas fa-clock"></i> 01:20 PM - Kamome Island (Self-guided)</li>
-          <li><i class="fas fa-clock"></i> 04:00 PM - Goryokaku Park (Self-guided, does not include tower ticket)</li>
-          <li><i class="fas fa-clock"></i> 05:30 PM - Return</li>
-        </ul>
-      </div>
-
-      <!-- April 25, 2025 - Flight and Travel to Kyoto -->
-      <div class="card">
-        <h3><i class="fas fa-calendar-day"></i> April 25, 2025 - Flight and Travel to Kyoto</h3>
-        <ul>
-          <li><i class="fas fa-plane"></i> 9:10 AM - Flight from Hakodate Airport to Tokyo Haneda Airport (Flight: 71)</li>
-          <li><i class="fas fa-clock"></i> 10:40 AM - Arrive at Tokyo Haneda Airport</li>
-          <li><i class="fas fa-train"></i> 11:00 AM - Bullet Train from Tokyo Haneda Airport to Shinagawa Station</li>
-          <
+  </div>
+</body>
+</html>
