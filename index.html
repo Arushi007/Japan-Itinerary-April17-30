@@ -18,7 +18,7 @@
       color: white;
       padding: 20px;
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: bold;
       text-transform: uppercase;
     }
@@ -39,24 +39,61 @@
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      padding: 15px;
+      padding: 20px;
       margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
     }
     .card h3 {
       margin: 0;
       color: #f94c66;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
     ul {
       list-style: none;
       padding-left: 20px;
     }
     ul li {
-      margin: 10px 0;
+      margin: 15px 0;
+      font-size: 1.1rem;
     }
     ul li i {
       color: #f94c66;
       margin-right: 10px;
+    }
+    .btn {
+      background-color: #f94c66;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #d44154;
+    }
+    .map-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .map-btn button {
+      background-color: #ff8ba7;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .map-btn button:hover {
+      background-color: #ff6699;
     }
   </style>
 </head>
@@ -80,6 +117,7 @@
           <li><i class="fas fa-cross"></i> Shibuya Crossing</li>
           <li><i class="fas fa-utensils"></i> Dinner at a local restaurant</li>
         </ul>
+        <a href="#map" class="btn">See Map</a>
       </div>
 
       <div class="card">
@@ -93,6 +131,7 @@
           <li><i class="fas fa-map-marker-alt"></i> Oshino Hakkai</li>
           <li><i class="fas fa-clock"></i> 18:30 Return to Tokyo</li>
         </ul>
+        <a href="#map" class="btn">See Map</a>
       </div>
 
       <div class="card">
@@ -107,11 +146,17 @@
           <li><i class="fas fa-snowflake"></i> Oshino Hakkai</li>
           <li><i class="fas fa-clock"></i> 18:20 Return to Tokyo</li>
         </ul>
+        <a href="#map" class="btn">See Map</a>
       </div>
     </div>
 
     <!-- Google Map -->
     <div class="map-container" id="map"></div>
+
+    <!-- Map Button -->
+    <div class="map-btn">
+      <button onclick="showMap()">Show Map</button>
+    </div>
   </div>
 
   <script>
@@ -121,13 +166,11 @@
       const mtFuji = { lat: 35.3606, lng: 138.7274 };
       const hakone = { lat: 35.2323, lng: 139.0011 };
 
-      // Create a map centered in Tokyo
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
         center: tokyo,
       });
 
-      // Add markers for key locations
       new google.maps.Marker({
         position: tokyo,
         map: map,
@@ -146,9 +189,14 @@
         title: "Hakone",
       });
     }
+
+    function showMap() {
+      const mapDiv = document.getElementById('map');
+      mapDiv.style.height = '500px'; // Show the map when the button is clicked
+      google.maps.event.trigger(map, 'resize');
+    }
   </script>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-
 </body>
 </html>
