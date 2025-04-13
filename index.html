@@ -1,48 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Japan Travel Itinerary | April 17 - 20</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan Travel Itinerary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #fef6e4, #f3d2c1);
       margin: 0;
-      background: linear-gradient(to bottom right, #f0f8ff, #fff);
-      color: #2c3e50;
+      padding: 0;
+      color: #444;
     }
     header {
-      background: linear-gradient(to right, #ff6347, #ff826e);
+      background: linear-gradient(to right, #ff8ba7, #ffa5ab);
       color: white;
-      padding: 30px;
+      padding: 15px 0;
       text-align: center;
-      font-size: 2.5rem;
-      font-weight: 700;
+      font-size: 2rem;
+      font-weight: 600;
+      border-radius: 0 0 15px 15px;
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #fff3f0;
-      padding: 10px;
-      gap: 10px;
-    }
-    nav button {
-      background-color: #ff6347;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-    nav button:hover {
-      background-color: #ff3b1f;
-    }
-    section {
+    .timeline {
       padding: 20px;
-      margin: 20px auto;
-      max-width: 900px;
-...
+      margin: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-left: 6px solid #ff8ba7;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      color: #ff4d6d;
+      font-size: 1.5rem;
+    }
+    .card p {
+      margin: 5px 0;
+      font-size: 1rem;
+    }
+    .icon {
+      margin-right: 8px;
+      color: #ff4d6d;
+    }
+    img.place {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>🇯🇵 Japan Trip Itinerary | Apr 18 - 20</header>
+
+  <section class="timeline">
+    <div class="card">
+      <h3><i class="fas fa-plane icon"></i>Flight</h3>
+      <p><strong>Departure:</strong> Apr 17, 19:05 from IGI</p>
+      <p><strong>Arrival:</strong> Apr 18, Haneda Airport</p>
+      <img src="https://cdn.pixabay.com/photo/2017/06/08/14/00/airplane-2384720_1280.jpg" alt="Flight" class="place">
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-taxi icon"></i>Airport Transfer</h3>
+      <p><strong>Pickup:</strong> Apr 18, 6:20 AM at Haneda Airport</p>
+      <p><strong>Drop:</strong> Shibuya City, MIYASHITA PARK</p>
+      <p><strong>Vehicle:</strong> Comfort 7-seater (2 Pax)</p>
+      <img src="https://cdn.pixabay.com/photo/2016/11/18/15/09/japan-1833292_1280.jpg" alt="Tokyo street" class="place">
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-map-marker-alt icon"></i>Stay & Explore</h3>
+      <p>Base: MIYASHITA PARK, Shibuya</p>
+      <p>Nearby: Harajuku, Shibuya Crossing, Meiji Shrine</p>
+      <img src="https://cdn.pixabay.com/photo/2019/03/23/14/09/japan-4074053_1280.jpg" alt="Shibuya" class="place">
+    </div>
+  </section>
+
+</body>
+</html>
