@@ -5,90 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japan Itinerary: April 18-19</title>
     <style>
+        /* General Styles */
         body {
-            font-family: 'Comic Sans MS', sans-serif;
-            background-color: #f2f6ff;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ff6ec7, #ff9a8b);
+            color: #fff;
             margin: 0;
             padding: 0;
             text-align: center;
         }
+
+        /* Header Styles */
         header {
-            background-color: #ff9ecf;
+            background-color: #ff4d95;
             color: #fff;
-            padding: 40px 20px;
-            border-bottom: 5px solid #f7c7d7;
+            padding: 60px 20px;
+            border-bottom: 10px solid #ff6c87;
+            border-radius: 0 0 30px 30px;
         }
-        h1 {
-            font-size: 3em;
-            margin: 0;
+
+        header h1 {
+            font-size: 4em;
             font-family: 'Lobster', cursive;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        p {
-            font-size: 1.2em;
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
         }
+
+        /* Main Section Styles */
         section {
-            padding: 20px;
+            padding: 30px;
         }
+
+        /* Location Cards */
         .location {
-            margin-bottom: 30px;
-            background-color: #fff;
+            margin-bottom: 40px;
+            background-color: #ffffff;
             border-radius: 15px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
+            overflow: hidden;
         }
+
         .location:hover {
             transform: scale(1.05);
         }
+
         .location img {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
-            border-bottom: 4px solid #f1f1f1;
+            border-bottom: 4px solid #ff99cc;
         }
+
         .location-content {
-            padding: 20px;
-            background-color: #ffe6f7;
+            padding: 25px;
+            background: #fff2f6;
             border-radius: 0 0 15px 15px;
         }
+
         h2 {
-            color: #ff6090;
-            font-size: 2em;
-            margin-top: 0;
+            font-size: 2.5em;
+            color: #ff66cc;
+            font-family: 'Lobster', cursive;
         }
-        .time, .details {
-            font-size: 1.1em;
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: #333;
         }
+
+        /* Cards for Activity Details */
         .card {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #f7d1f4;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ff99cc;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            color: #fff;
         }
+
         footer {
-            background-color: #ff9ecf;
+            background-color: #ff4d95;
             color: white;
             padding: 20px;
-            font-size: 1.1em;
+            font-size: 1.2em;
+            border-top: 5px solid #ff6c87;
+            margin-top: 40px;
         }
-        footer p {
-            margin: 0;
-        }
-        .location-content p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
+
+        /* Image Sections */
         .image-section {
-            margin-top: 20px;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
+
         .image-section img {
             width: 100%;
-            height: 250px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 15px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .location .details {
+            font-size: 1.1em;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -96,7 +129,7 @@
 
 <header>
     <h1>Japan Itinerary: April 18-19</h1>
-    <p>Explore the best of Tokyo and Mt. Fuji with a touch of fun!</p>
+    <p>Explore Tokyo, Mt. Fuji & More with Colorful Adventures!</p>
 </header>
 
 <section>
@@ -108,7 +141,7 @@
             <p><strong>Arrival:</strong> 17:00 at Sequence Iyashita Hotel</p>
             <p><strong>Activities:</strong> Visit Meiji Shrine, Yoyogi Park, Asakusa Sensoji Temple, Tokyo Tower, and Takeshita Street.</p>
             <div class="card">
-                <p>Start the day with a peaceful visit to the Meiji Shrine, followed by a stroll through the lush Yoyogi Park. Then, visit the bustling Asakusa Sensoji Temple, followed by Tokyo Tower for a stunning view. Don’t forget the shopping and street food at Takeshita Street!</p>
+                <p>Start your adventure with a serene visit to Meiji Shrine, explore Yoyogi Park, marvel at Asakusa Sensoji Temple, take in the iconic Tokyo Tower views, and shop on the lively Takeshita Street!</p>
             </div>
         </div>
     </div>
@@ -117,9 +150,9 @@
         <img src="https://via.placeholder.com/1200x500?text=Shibuya+Crossing" alt="Shibuya Crossing">
         <div class="location-content">
             <h2>Evening: Shibuya Crossing & Ginza</h2>
-            <p>Explore the vibrant Shibuya Crossing, enjoy street food, and shop in the upscale Ginza district.</p>
+            <p>Explore the iconic Shibuya Crossing, try street food, and shop in the upscale Ginza district.</p>
             <div class="card">
-                <p>End your evening with a delicious dinner at one of the many food stalls near Shibuya, then head to Ginza for an upscale shopping experience and enjoy its lively atmosphere.</p>
+                <p>End your day in the vibrant Shibuya Crossing, savor delicious Japanese food from street vendors, and then head to Ginza for an evening of chic shopping and vibrant nightlife.</p>
             </div>
         </div>
     </div>
@@ -132,7 +165,7 @@
             <p><strong>Departure from Tokyo:</strong> 07:15 AM from Shinjuku Center Building</p>
             <p><strong>Activities:</strong> Seasonal fruit picking, flower viewing at various parks, Mt. Fuji 5th Station, Kachi-Kachi Ropeway, Oshino Hakkai.</p>
             <div class="card">
-                <p>Start the day with a scenic train ride to Yamanashi, followed by fruit picking and breathtaking views of Mt. Fuji. Enjoy a special lunch box at the 5th Station before taking the Kachi-Kachi Ropeway for panoramic views.</p>
+                <p>Head to Yamanashi for fruit picking, breathtaking views of Mt. Fuji, and a delicious lunch at the 5th Station. Experience the scenic beauty with the Kachi-Kachi Ropeway and visit Oshino Hakkai for stunning views of the iconic mountain.</p>
             </div>
         </div>
     </div>
@@ -141,9 +174,9 @@
         <img src="https://via.placeholder.com/1200x500?text=Oshino+Hakkai" alt="Oshino Hakkai">
         <div class="location-content">
             <h2>Oshino Hakkai & Return to Tokyo</h2>
-            <p>Explore the scenic Oshino Hakkai, then return to Tokyo.</p>
+            <p>Explore the scenic Oshino Hakkai, then return to Tokyo for the evening.</p>
             <div class="card">
-                <p>After visiting Oshino Hakkai, head back to Tokyo, reflecting on your beautiful day surrounded by nature and culture.</p>
+                <p>After enjoying the serene beauty of Oshino Hakkai, head back to Tokyo, cherishing the day’s memories filled with nature, culture, and stunning views.</p>
             </div>
         </div>
     </div>
@@ -151,11 +184,12 @@
     <div class="image-section">
         <img src="https://via.placeholder.com/1200x500?text=Mt+Fuji+Ropeway" alt="Mt. Fuji Ropeway">
         <img src="https://via.placeholder.com/1200x500?text=Fruit+Picking+Experience" alt="Fruit Picking Experience">
+        <img src="https://via.placeholder.com/1200x500?text=Kachi+Kachi+Ropeway" alt="Kachi Kachi Ropeway">
     </div>
 </section>
 
 <footer>
-    <p>Have an amazing time in Japan! 🌸</p>
+    <p>Have an amazing time in Japan! 🌸 Stay curious, and enjoy every moment of your journey! ✈️</p>
 </footer>
 
 </body>
